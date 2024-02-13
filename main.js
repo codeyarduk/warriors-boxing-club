@@ -1,8 +1,8 @@
 const changeBg = () => {
+  
   let header = document.getElementById('header');
-
   let scrollValue = window.scrollY;
-  console.log(scrollValue);
+
   if(scrollValue > 563) {
     header.classList.add('transition-all');
     header.classList.add('bg-white');

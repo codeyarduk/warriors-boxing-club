@@ -4,6 +4,9 @@ export default {
     extend: {
       fontFamily: {
         syne: ['Syne', 'serif']
+      },
+      colors: {
+        "warriorPink": "#DC006F"
       }
     },
   },
