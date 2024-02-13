@@ -1,7 +1,11 @@
 export default {
   content: ["./*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        syne: ['Syne', 'serif']
+      }
+    },
   },
   plugins: [],
 }
