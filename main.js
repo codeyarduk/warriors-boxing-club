@@ -1,5 +1,5 @@
 const changeBg = () => {
-  
+
   let header = document.getElementById('header');
   let scrollValue = window.scrollY;
 
@@ -9,12 +9,14 @@ const changeBg = () => {
     document.getElementById('header-mobile-image-white').classList.add('hidden')
     document.getElementById('header-mobile-image-black').classList.remove('hidden')
     document.getElementById('header-text').classList.add('text-black')
+    document.getElementById('header-text').classList.remove('text-white')
 
   } else {
     header.classList.remove('bg-white')
     document.getElementById('header-mobile-image-black').classList.add('hidden')
     document.getElementById('header-mobile-image-white').classList.remove('hidden')
     document.getElementById('header-text').classList.remove('text-black')
+    document.getElementById('header-text').classList.add('text-white')
 
   };
 }
