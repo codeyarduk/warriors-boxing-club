@@ -6,7 +6,9 @@ export default {
         syne: ['Syne', 'serif']
       },
       colors: {
-        "warriorPink": "#DC006F"
+        "warriorPink": "#DC006F",
+        "warriorBlueBg": "#0E294F",
+        "warriorDarkBlueBg": "#0B1F3B"
       }
     },
   },
