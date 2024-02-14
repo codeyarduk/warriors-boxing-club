@@ -219,38 +219,51 @@
     </div>
     <!-- Footer section -->
     <footer class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px]">
-      <div class="w-[336px] font-syne text-white">
-        <p class="font-extrabold mb-3">Opening Time</p>
-        <p class="mb-3">
-          Monday - Friday: 9:00 AM - 9:00 PM
-          <br>Saturday: 10:00 AM - 6:00 PM
-          <br>Sunday: Closed
-        </p>
-        <p class="mb-[56px]">Please note that these hours are subject to change for special events or holidays.</p>
+      <div class="w-[336px] font-syne text-white lg:w-[816px]">
+        <!-- Flex 1 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row lg:mb-16">
+          <div class="lg:w-[272px] lg:mr-14">
+            <p class="font-extrabold mb-3">Opening Time</p>
+            <p class="mb-3">
+              Monday - Friday: 9:00 AM - 9:00 PM
+              <br>Saturday: 10:00 AM - 6:00 PM
+              <br>Sunday: Closed
+            </p>
+            <p class="mb-[56px] lg:mb-0 lg:w-[272px]">Please note that these hours are subject to change for special events or holidays.</p>
+          </div>
 
-        <p class="font-extrabold mb-3">Socials</p>
-        <p class="mb-[56px]">
-          Facebook: @warriorsboxclub
-          <br>Instagram: @warriorsboxclub
-          <br>Twitter: @warriorsboxing
-          <br>YouTube: Warriors Box Club
-        </p>
+          <div class="">
+            <p class="font-extrabold mb-3">Socials</p>
+            <p class="mb-[56px]">
+              Facebook: @warriorsboxclub
+              <br>Instagram: @warriorsboxclub
+              <br>Twitter: @warriorsboxing
+              <br>YouTube: Warriors Box Club
+            </p>
+          </div>
+        </div>
+        <!-- Flex 2 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row">
+          <div class="lg:w-[272px] lg:mr-14">
+            <p class="font-extrabold mb-3">Location</p>
+            <p class="mb-[56px]">
+              Location: Warriors Boxing Club,<br>5 PaddingtonRd, Bath, Somerset, BA54RD
+            </p>
+          </div>
 
-        <p class="font-extrabold mb-3">Location</p>
-        <p class="mb-[56px]">
-          Location: Warriors Boxing Club,<br>5 Paddington Rd, Bath, Somerset, BA54RD
-        </p>
-
-        <p class="font-extrabold mb-3">Contact</p>
-        <p>Email: info@warriorsboxclub.com
-          <br>Phone: +27(555) 4123-4567</p>
+          <div>
+          <p class="font-extrabold mb-3">Contact</p>
+          <p>Email: info@warriorsboxclub.com
+            <br>Phone: +27(555) 4123-4567</p>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Feel free to reach out... -->
     <hr>
-    <div class="bg-[url('resources/mobile-footer-background.png')] bg-no-repeat h-[215px] text-white flex flex-col justify-center items-center font-syne">
-      <p class="w-[336px] text-center text-lg font-bold pb-5 ">Feel free to reach out to us for any inquiries or training sessions!</p>
-      <p>Privacy Policy & Terms of Service</p>
+    <div class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')]">
+      <p class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start">Feel free to reach out to us for any inquiries or training sessions!</p>
+      <p class="lg:text-start lg:w-[816px]">Privacy Policy & Terms of Service</p>
     </div>
     <script src="main.js"></script>
   </body>
