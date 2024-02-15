@@ -162,46 +162,59 @@
     </div>
     <!-- Location Section -->
     <div class="font-syne flex flex-col justify-center items-center py-[100px] ">
-      <img src="./resources/location-image.png" alt="Map of bath where warriors boxing gym is located">
-      <div class="w-[336px] flex flex-col items-center justify-center text-center pt-16">
-        <p class="font-extrabold text-2xl">Location</p>
-        <p class="pt-5">Proudly serving the greater <span class="font-bold">Bath</span> area. Whether you're a local or just passing through, 
-          drop in for a session.</p>
-        <button class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg">View on Maps</button>    
+      <div class="flex flex-col justify-center items-center lg:flex-row lg:w-[816px] lg:justify-between">
+        <img class="lg:hidden" src="./resources/location-image.png" alt="Map of bath where warriors boxing gym is located">
+        <img class="hidden lg:block" src="./resources/tablet-location.png" alt="Map of bath where warriors boxing gym is located">
+        <div class="w-[336px] flex flex-col items-center justify-center text-center pt-16 lg:text-start lg:items-start lg:pt-0">
+          <p class="font-extrabold leading-[25.8px] text-2xl">Location</p>
+          <p class="pt-5 leading-[19.2px] lg:pt-4">Proudly serving the greater <span class="font-bold">Bath</span> area. Whether you're a local or just passing through, 
+            drop in for a session.</p>
+          <button class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[272px] lg:mt-10">View on Maps</button>    
+        </div>
       </div>
     </div>
     <!-- Our featured packages section -->
     <div class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36">
-      <p class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12">Our Featured Packages</p>
-      <!-- First Item in flex column -->
-      <div class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4">
-        <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]">
-          <p class="font-extrabold text-center">Beginners Bootcamp</p>
-          <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold">$29</span>/month</p>
-          <p class="text-center text-lg font-normal">Jumpstart your boxing journey with our foundational course.</p>
-          <a href="#" class="font-bold text-sm underline pt-4">View Package</a>
+      <p class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16">Our Featured Packages</p>
+      <div class="flex justify-center flex-col items-center lg:items-end">
+        <div class="flex flex-col lg:flex-row lg:w-[816px] lg:justify-between">
+          <!-- First Item in flex column -->
+          <div class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
+            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]">
+              <p class="font-extrabold text-center">Beginners Bootcamp</p>
+              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$29</span>/month</p>
+              <div class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]">
+                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">Jumpstart your boxing journey with our foundational course.</p>
+                <a href="#" class="font-bold text-sm underline">View Package</a>
+              </div>
+            </div>
+          </div>
+          <!-- Second Item in flex column -->
+          <div class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
+            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]">
+              <p class="font-extrabold text-center">Fighter's Programme</p>
+              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$49</span>/month</p>
+              <div class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]">
+                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">For those ready to take their skills to the competition level.</p>
+                <a href="#" class="font-bold text-sm underline">View Package</a>
+              </div>
+            </div>
+          </div>
+          <!-- Third Item in flex column -->
+          <div class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
+            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]">
+              <p class="font-extrabold text-center">Personal Training</p>
+              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$99</span>/month</p>
+              <div class="flex flex-col justify-between h-[99px] items-center">
+                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">One-on-one sessions tailored to your goals.</p>
+                <a href="#" class="font-bold text-sm underline">View Package</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- View all packages link -->
+        <a class="font-syne font-extrabold underline decoration-warriorPink pt-10 pb-20 lg:pt-6 lg:pb-28">View All Packages</a>
       </div>
-      <!-- Second Item in flex column -->
-      <div class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4">
-        <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]">
-          <p class="font-extrabold text-center">Fighter's Programme</p>
-          <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold">$49</span>/month</p>
-          <p class="text-center text-lg font-normal">For those ready to take their skills to the competition level.</p>
-          <a href="#" class="font-bold text-sm underline pt-6">View Package</a>
-        </div>
-      </div>
-      <!-- Third Item in flex column -->
-      <div class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4">
-        <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]">
-          <p class="font-extrabold text-center">Personal Training</p>
-          <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold">$99</span>/month</p>
-          <p class="text-center text-lg font-normal">One-on-one sessions tailored to your goals.</p>
-          <a href="#" class="font-bold text-sm underline pt-12">View Package</a>
-        </div>
-      </div>
-      <!-- View all packages link -->
-      <a class="font-syne font-extrabold underline decoration-warriorPink pt-10 pb-20">View All Packages</a>
     </div>
     <!-- About Us Section -->
     <div class="flex flex-col justify-center items-center font-syne lg:flex-row ">
