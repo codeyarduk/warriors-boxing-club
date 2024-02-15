@@ -13,22 +13,46 @@
     >
       <div class="flex flex-row items-start">
         <img src="resources/icons/mobile-warrior-logo.png" class="fixed" />
-        <p id="header-text" class="text-white font-syne font-extrabold text-lg ml-[34px]">
+        <p
+          id="header-text"
+          class="text-white font-syne font-extrabold text-lg ml-[34px]"
+        >
           ARRIORS
         </p>
       </div>
       <div>
-        <img id="header-mobile-image-white" src="resources/icons/burger-right.png" />
-        <img id="header-mobile-image-black" src="resources/icons/burger-right-dark-blue.png" class="hidden" />
+        <img
+          id="header-mobile-image-white"
+          src="resources/icons/burger-right.png"
+        />
+        <img
+          id="header-mobile-image-black"
+          src="resources/icons/burger-right-dark-blue.png"
+          class="hidden"
+        />
       </div>
     </header>
     <!-- HERO SECTION -->
-    <div>
-      <img
-        class=""
-        src="./resources/mobile-hero-image.png"
-        alt="woman with boxing gloves on"
-      />
+    <div
+      class="bg-[url('/resources/mobile-hero-image.png')] h-[638px] flex flex-col"
+    >
+      <p
+        class="font-extrabold font-syne text-white text-[40px] text-center leading-10 pt-[153px] px-6"
+      >
+        Unleash Your Inner Warrior
+      </p>
+      <p
+        class="font-semibold font-syne text-white text-lg leading-5 text-center pt-8 px-6"
+      >
+        Join Warriors Boxing Club to boost your physical and mental resilience,
+        with support from our community and coaches, regardless of your
+        experience level. Begin your transformation today.
+      </p>
+      <button
+        class="bg-white text-black font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg self-center"
+      >
+        Join now
+      </button>
     </div>
     <!-- WHAT BOXERS HAVE TO SAY SECTION -->
     <div class="text-center flex flex-col justify-center pt-20">
@@ -140,9 +164,7 @@
           height="192"
         />
         <div class="flex flex-col">
-          <p
-            class="font-extrabold font-syne text-center pt-14 mt-3 pb-4 text-2xl"
-          >
+          <p class="font-extrabold font-syne text-center pt-14 pb-4 text-2xl">
             Our Facilities
           </p>
           <p
@@ -152,24 +174,54 @@
             beginners and seasoned boxers. Our gym boasts
           </p>
           <div>
-            <p>asf</p>
-            <p>asf</p>
-            <p>asf</p>
-            <p>asf</p>
+            <ul class="font-syne font-semibold px-6">
+              <li class="pt-8">&#x2022; Professional Boxing Rings</li>
+              <li class="pt-2">
+                &#x2022; Comprehensive Weight and Cardio Equipment
+              </li>
+              <li class="pt-2">
+                &#x2022; Dedicated Bag Area with Various Types of Punching Bags
+              </li>
+              <li class="pt-2">&#x2022; Clean, Modern Changing Rooms</li>
+            </ul>
+            <button
+              class="bg-[#DC006F] text-white font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg"
+            >
+              View All
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- Location Section -->
-    <div class="font-syne flex flex-col justify-center items-center py-[100px] ">
-      <div class="flex flex-col justify-center items-center lg:flex-row lg:w-[816px] lg:justify-between">
-        <img class="lg:hidden" src="./resources/location-image.png" alt="Map of bath where warriors boxing gym is located">
-        <img class="hidden lg:block" src="./resources/tablet-location.png" alt="Map of bath where warriors boxing gym is located">
-        <div class="w-[336px] flex flex-col items-center justify-center text-center pt-16 lg:text-start lg:items-start lg:pt-0">
+    <div class="font-syne flex flex-col justify-center items-center py-[100px]">
+      <div
+        class="flex flex-col justify-center items-center lg:flex-row lg:w-[816px] lg:justify-between"
+      >
+        <img
+          class="lg:hidden"
+          src="./resources/location-image.png"
+          alt="Map of bath where warriors boxing gym is located"
+        />
+        <img
+          class="hidden lg:block"
+          src="./resources/tablet-location.png"
+          alt="Map of bath where warriors boxing gym is located"
+        />
+        <div
+          class="w-[336px] flex flex-col items-center justify-center text-center pt-16 lg:text-start lg:items-start lg:pt-0"
+        >
           <p class="font-extrabold leading-[25.8px] text-2xl">Location</p>
-          <p class="pt-5 leading-[19.2px] lg:pt-4">Proudly serving the greater <span class="font-bold">Bath</span> area. Whether you're a local or just passing through, 
-            drop in for a session.</p>
-          <button class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[272px] lg:mt-10">View on Maps</button>    
+          <p class="pt-5 leading-[19.2px] lg:pt-4">
+            Proudly serving the greater
+            <span class="font-bold">Bath</span> area. Whether you're a local or
+            just passing through, drop in for a session.
+          </p>
+          <button
+            class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[272px] lg:mt-10"
+          >
+            View on Maps
+          </button>
         </div>
       </div>
     </div>
@@ -203,68 +255,142 @@
     </div>
 
     <!-- Our featured packages section -->
-    <div class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36">
-      <p class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16">Our Featured Packages</p>
+    <div
+      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36"
+    >
+      <p
+        class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16"
+      >
+        Our Featured Packages
+      </p>
       <div class="flex justify-center flex-col items-center lg:items-end">
         <div class="flex flex-col lg:flex-row lg:w-[816px] lg:justify-between">
           <!-- First Item in flex column -->
-          <div class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
-            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]">
+          <div
+            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+          >
+            <div
+              class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]"
+            >
               <p class="font-extrabold text-center">Beginners Bootcamp</p>
-              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$29</span>/month</p>
-              <div class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]">
-                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">Jumpstart your boxing journey with our foundational course.</p>
+              <p class="text-lg font-semibold py-8">
+                <span class="text-[56px] font-bold lg:text-5xl">$29</span>/month
+              </p>
+              <div
+                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]"
+              >
+                <p
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                >
+                  Jumpstart your boxing journey with our foundational course.
+                </p>
                 <a href="#" class="font-bold text-sm underline">View Package</a>
               </div>
             </div>
           </div>
           <!-- Second Item in flex column -->
-          <div class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
-            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]">
+          <div
+            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+          >
+            <div
+              class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]"
+            >
               <p class="font-extrabold text-center">Fighter's Programme</p>
-              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$49</span>/month</p>
-              <div class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]">
-                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">For those ready to take their skills to the competition level.</p>
+              <p class="text-lg font-semibold py-8">
+                <span class="text-[56px] font-bold lg:text-5xl">$49</span>/month
+              </p>
+              <div
+                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]"
+              >
+                <p
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                >
+                  For those ready to take their skills to the competition level.
+                </p>
                 <a href="#" class="font-bold text-sm underline">View Package</a>
               </div>
             </div>
           </div>
           <!-- Third Item in flex column -->
-          <div class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]">
-            <div class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]">
+          <div
+            class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+          >
+            <div
+              class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]"
+            >
               <p class="font-extrabold text-center">Personal Training</p>
-              <p class="text-lg font-semibold py-8"><span class="text-[56px] font-bold lg:text-5xl">$99</span>/month</p>
+              <p class="text-lg font-semibold py-8">
+                <span class="text-[56px] font-bold lg:text-5xl">$99</span>/month
+              </p>
               <div class="flex flex-col justify-between h-[99px] items-center">
-                <p class="text-center text-lg font-normal leading-[21.6px] lg:text-base">One-on-one sessions tailored to your goals.</p>
+                <p
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                >
+                  One-on-one sessions tailored to your goals.
+                </p>
                 <a href="#" class="font-bold text-sm underline">View Package</a>
               </div>
             </div>
           </div>
         </div>
         <!-- View all packages link -->
-        <a class="font-syne font-extrabold underline decoration-warriorPink pt-10 pb-20 lg:pt-6 lg:pb-28">View All Packages</a>
+        <a
+          class="font-syne font-extrabold underline decoration-warriorPink pt-10 pb-20 lg:pt-6 lg:pb-28"
+          >View All Packages</a
+        >
       </div>
     </div>
     <!-- About Us Section -->
-    <div class="flex flex-col justify-center items-center font-syne lg:flex-row ">
-      <div class="lg:w-[816px] flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:py-[120px]">
-        <img class="pt-[104px] pb-16 lg:hidden" src="./resources/mobile-about-us.png" alt="Warriors boxing group standing together" >
+    <div
+      class="flex flex-col justify-center items-center font-syne lg:flex-row"
+    >
+      <div
+        class="lg:w-[816px] flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:py-[120px]"
+      >
+        <img
+          class="pt-[104px] pb-16 lg:hidden"
+          src="./resources/mobile-about-us.png"
+          alt="Warriors boxing group standing together"
+        />
         <!-- Container for text -->
         <div class="w-[336px]">
-          <p class="font-extrabold text-2xl text-center lg:text-start lg:text-[28px]">About Us</p>
-          <p class="py-6 text-center lg:text-start">Founded by former professional boxers, Warriors Boxing Club is more than just a gym. It's a place where you can challenge yourself, learn the noble art of boxing, and be part of an inspiring community. Our mission is to empower individuals through the discipline and fitness boxing provides.</p>
-          <p class="text-warriorPink text-sm font-bold pb-[191px] text-center lg:pb-0 lg:text-start">Read more</p>
+          <p
+            class="font-extrabold text-2xl text-center lg:text-start lg:text-[28px]"
+          >
+            About Us
+          </p>
+          <p class="py-6 text-center lg:text-start">
+            Founded by former professional boxers, Warriors Boxing Club is more
+            than just a gym. It's a place where you can challenge yourself,
+            learn the noble art of boxing, and be part of an inspiring
+            community. Our mission is to empower individuals through the
+            discipline and fitness boxing provides.
+          </p>
+          <p
+            class="text-warriorPink text-sm font-bold pb-[191px] text-center lg:pb-0 lg:text-start"
+          >
+            Read more
+          </p>
         </div>
-        <img class="hidden lg:block" src="./resources/tablet-about-us.png" alt="Warriors boxing group standing together">
+        <img
+          class="hidden lg:block"
+          src="./resources/tablet-about-us.png"
+          alt="Warriors boxing group standing together"
+        />
       </div>
-
     </div>
     <!-- We Hope to see you... Section -->
     <div class="flex flex-col justify-center items-center bg-[#EFF3F8]">
-      <p class="w-[336px] font-syne font-extrabold text-[40px] text-center py-[104px] leading-10 lg:w-[816px] lg:text-[32px]">We Hope to See You Become a Warrior Soon!</p>
+      <p
+        class="w-[336px] font-syne font-extrabold text-[40px] text-center py-[104px] leading-10 lg:w-[816px] lg:text-[32px]"
+      >
+        We Hope to See You Become a Warrior Soon!
+      </p>
     </div>
     <!-- Footer section -->
-    <footer class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px]">
+    <footer
+      class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px]"
+    >
       <div class="w-[336px] font-syne text-white lg:w-[816px]">
         <!-- Flex 1 for Tablet View Port -->
         <div class="lg:flex lg:flex-row lg:mb-16">
@@ -272,19 +398,20 @@
             <p class="font-extrabold mb-3">Opening Time</p>
             <p class="mb-3">
               Monday - Friday: 9:00 AM - 9:00 PM
-              <br>Saturday: 10:00 AM - 6:00 PM
-              <br>Sunday: Closed
+              <br />Saturday: 10:00 AM - 6:00 PM <br />Sunday: Closed
             </p>
-            <p class="mb-[56px] lg:mb-0 lg:w-[272px]">Please note that these hours are subject to change for special events or holidays.</p>
+            <p class="mb-[56px] lg:mb-0 lg:w-[272px]">
+              Please note that these hours are subject to change for special
+              events or holidays.
+            </p>
           </div>
 
           <div class="">
             <p class="font-extrabold mb-3">Socials</p>
             <p class="mb-[56px]">
               Facebook: @warriorsboxclub
-              <br>Instagram: @warriorsboxclub
-              <br>Twitter: @warriorsboxing
-              <br>YouTube: Warriors Box Club
+              <br />Instagram: @warriorsboxclub <br />Twitter: @warriorsboxing
+              <br />YouTube: Warriors Box Club
             </p>
           </div>
         </div>
@@ -293,23 +420,33 @@
           <div class="lg:w-[272px] lg:mr-14">
             <p class="font-extrabold mb-3">Location</p>
             <p class="mb-[56px]">
-              Location: Warriors Boxing Club,<br>5 PaddingtonRd, Bath, Somerset, BA54RD
+              Location: Warriors Boxing Club,<br />5 PaddingtonRd, Bath,
+              Somerset, BA54RD
             </p>
           </div>
 
           <div>
-          <p class="font-extrabold mb-3">Contact</p>
-          <p>Email: info@warriorsboxclub.com
-            <br>Phone: +27(555) 4123-4567</p>
+            <p class="font-extrabold mb-3">Contact</p>
+            <p>
+              Email: info@warriorsboxclub.com <br />Phone: +27(555) 4123-4567
+            </p>
           </div>
         </div>
       </div>
     </footer>
     <!-- Feel free to reach out... -->
-    <hr>
-    <div class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')]">
-      <p class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start">Feel free to reach out to us for any inquiries or training sessions!</p>
-      <p class="lg:text-start lg:w-[816px]">Privacy Policy & Terms of Service</p>
+    <hr />
+    <div
+      class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')]"
+    >
+      <p
+        class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start"
+      >
+        Feel free to reach out to us for any inquiries or training sessions!
+      </p>
+      <p class="lg:text-start lg:w-[816px]">
+        Privacy Policy & Terms of Service
+      </p>
     </div>
     <script src="main.js"></script>
   </body>
