@@ -25,6 +25,7 @@
           id="header-mobile-image-black"
           src="resources/icons/burger-right-dark-blue.png"
           class="hidden"
+          onClick="toggleDropdownMenu()"
         />
         <!-- DROP DOWN MENU  -->
         <div onClick="toggleDropdownMenu()">
@@ -37,81 +38,51 @@
           />
         </div>
         <div
-          class="bg-white shadow-md fixed hidden left-0 top-[71px]"
+          class="bg-white shadow-md hidden top-[74px] left-0 h-full fixed"
           id="dropdown"
         >
-          <ul
-            class="font-syne flex justify-between flex-col text-black h-[400px] text-center w-dvw font-bold"
+          <div
+            class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
           >
-            <li class="py-[12px]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon text-white"
-                >&#8205;</a
-              >
-            </li>
-            <li class="py-[12px] hover:bg-[#EFEFEF]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon"
-                href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="py-[12px] hover:bg-[#EFEFEF]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon"
-                href="#about"
-                >About</a
-              >
-            </li>
-            <li class="py-[12px] hover:bg-[#EFEFEF]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon"
-                href="#schedule"
-                >Schedule</a
-              >
-            </li>
-            <li class="py-[12px] hover:bg-[#EFEFEF]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon"
-                href="#staff"
-                >Staff</a
-              >
-            </li>
-            <li class="py-[12px] hover:bg-[#EFEFEF]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon"
-                href="#contact"
-                >Contact</a
-              >
-            </li>
-            <li >
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] hover:cursor-pointer w-dvw"
-                href="#membership"
-                >Membership</a
-              >
-            </li>
-            <li class="py-[12px]">
-              <a
-                onClick="toggleDropdownMenu()"
-                class="cursor-pointer menu-icon text-white"
-                >&#8205;</a
-              >
-            </li>
-          </ul>
+            <a
+              onClick="toggleDropdownMenu()"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mt-[80px]"
+              href="#home"
+              >Home</a
+            >
+            <a
+              onClick="toggleDropdownMenu()"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              href="#about"
+              >About</a
+            >
+            <a
+              onClick="toggleDropdownMenu()"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              href="#staff"
+              >Staff</a
+            >
+            <a
+              onClick="toggleDropdownMenu()"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              href="#contact"
+              >Facilities</a
+            >
+            <a
+              onClick="toggleDropdownMenu()"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px]"
+              href="#membership"
+              >Membership</a
+            >
+          </div>
         </div>
         <script>
           function toggleDropdownMenu() {
             let dropdownButton = document.querySelector("#dropdown");
             dropdown.classList.toggle("hidden");
+
           }
+
         </script>
       </div>
     </header>

@@ -2,8 +2,9 @@ const changeBg = () => {
 
   let header = document.getElementById('header');
   let scrollValue = window.scrollY;
+  console.log(scrollValue);
 
-  if(scrollValue > 563) {
+  if(scrollValue > 75) {
     header.classList.add('transition-all');
     header.classList.add('bg-white');
     document.getElementById('header-mobile-image-white').classList.add('hidden')
@@ -22,3 +23,4 @@ const changeBg = () => {
 }
 
 window.addEventListener('scroll', changeBg);
+
