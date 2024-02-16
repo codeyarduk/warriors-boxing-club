@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   </head>
   <body id="top">
     <!-- HEADER -->
@@ -12,14 +13,16 @@
       class="header flex flex-row justify-between items-center py-6 px-7 fixed w-full z-10 xl:py-9"
     >
       <div class="flex flex-row items-start">
-        <a href="#top"><img src="resources/icons/mobile-warrior-logo.svg" class="fixed" /></a>
+        <a href="#top"
+          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+        /></a>
         <a
           id="header-text"
           class="text-white font-syne font-extrabold text-lg ml-[34px]"
           href="#top"
         >
           ARRIORS
-      </a>
+        </a>
       </div>
       <div>
         <img
@@ -81,9 +84,7 @@
           function toggleDropdownMenu() {
             let dropdownButton = document.querySelector("#dropdown");
             dropdown.classList.toggle("hidden");
-
           }
-
         </script>
       </div>
     </header>
@@ -174,7 +175,7 @@
           class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
         >
           <div class="flex justify-center pb-5">
-            <img src="resources/icons/group-people.svg"/>
+            <img src="resources/icons/group-people.svg" />
           </div>
 
           <p class="text-white font-syne font-bold pb-4">Community</p>
@@ -352,7 +353,8 @@
 
     <!-- Our featured packages section -->
     <div
-      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36" id="membership"
+      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36"
+      id="membership"
     >
       <p
         class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16"
