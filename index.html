@@ -22,14 +22,96 @@
       </div>
       <div>
         <img
-          id="header-mobile-image-white"
-          src="resources/icons/burger-right.png"
-        />
-        <img
           id="header-mobile-image-black"
           src="resources/icons/burger-right-dark-blue.png"
           class="hidden"
         />
+        <!-- DROP DOWN MENU  -->
+        <div onClick="toggleDropdownMenu()">
+          <img
+            src="resources/icons/burger-right.png"
+            class="cursor-pointer menu-icon xl:hidden"
+            loading="lazy"
+            alt="knockout boxing logo"
+          />
+        </div>
+        <div
+          class="bg-white shadow-md fixed hidden left-0 top-[71px]"
+          id="dropdown"
+        >
+          <ul
+            class="font-syne flex justify-between flex-col text-black h-[400px] text-center w-dvw font-bold"
+          >
+            <li class="py-[12px]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon text-white"
+                >&#8205;</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#schedule"
+                >Schedule</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#staff"
+                >Staff</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="py-[12px] hover:bg-[#EFEFEF]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon"
+                href="#membership"
+                >Membership</a
+              >
+            </li>
+            <li class="py-[12px]">
+              <a
+                onClick="toggleDropdownMenu()"
+                class="cursor-pointer menu-icon text-white"
+                >&#8205;</a
+              >
+            </li>
+          </ul>
+        </div>
+        <script>
+          function toggleDropdownMenu() {
+            let dropdownButton = document.querySelector("#dropdown");
+            dropdown.classList.toggle("hidden");
+          }
+        </script>
       </div>
     </header>
     <!-- HERO SECTION -->
@@ -226,29 +308,67 @@
       </div>
     </div>
     <!-- Who can join section -->
-    <div class="hidden font-syne lg:flex  lg:flex-col lg:justify-center lg:items-center lg:bg-[#EFF3F8]">
-      <p class="font-extrabold text-[22px] leading-5 pt-[120px] pb-4">Who Can Join?</p>
-      <p class="font-bold text-base leading-[19.2px] pb-16">Warriors Boxing Club welcomes everyone</p>
+    <div
+      class="hidden font-syne lg:flex lg:flex-col lg:justify-center lg:items-center lg:bg-[#EFF3F8]"
+    >
+      <p class="font-extrabold text-[22px] leading-5 pt-[120px] pb-4">
+        Who Can Join?
+      </p>
+      <p class="font-bold text-base leading-[19.2px] pb-16">
+        Warriors Boxing Club welcomes everyone
+      </p>
       <div class="flex flex-row pb-[120px]">
         <div class="flex flex-col">
           <div class="flex flex-row justify-center items-center pb-6">
-            <img src="./resources/icons/pink-checkmark.svg" width="24" height="24" alt="White check-mark with circular pink background">
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]"><span class="font-semibold">Beginners</span> eager to learn the basics</p>
+            <img
+              src="./resources/icons/pink-checkmark.svg"
+              width="24"
+              height="24"
+              alt="White check-mark with circular pink background"
+            />
+            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+              <span class="font-semibold">Beginners</span> eager to learn the
+              basics
+            </p>
           </div>
           <div class="flex flex-row">
-            <img src="./resources/icons/pink-checkmark.svg" width="24" height="24" alt="White check-mark with circular pink background">
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]"><span class="font-semibold">Fitness enthusiasts</span> seeking a new challenge</p>
+            <img
+              src="./resources/icons/pink-checkmark.svg"
+              width="24"
+              height="24"
+              alt="White check-mark with circular pink background"
+            />
+            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+              <span class="font-semibold">Fitness enthusiasts</span> seeking a
+              new challenge
+            </p>
           </div>
         </div>
 
         <div class="flex flex-col pl-28">
           <div class="flex flex-row pb-6">
-            <img src="./resources/icons/pink-checkmark.svg" width="24" height="24" alt="White check-mark with circular pink background">
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]"><span class="font-semibold">Amateur</span> boxers looking to compete</p>
+            <img
+              src="./resources/icons/pink-checkmark.svg"
+              width="24"
+              height="24"
+              alt="White check-mark with circular pink background"
+            />
+            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+              <span class="font-semibold">Amateur</span> boxers looking to
+              compete
+            </p>
           </div>
           <div class="flex flex-row">
-            <img src="./resources/icons/pink-checkmark.svg" width="24" height="24" alt="White check-mark with circular pink background">
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]"><span class="font-semibold">Anyone</span> with the heart of a warrior</p>
+            <img
+              src="./resources/icons/pink-checkmark.svg"
+              width="24"
+              height="24"
+              alt="White check-mark with circular pink background"
+            />
+            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+              <span class="font-semibold">Anyone</span> with the heart of a
+              warrior
+            </p>
           </div>
         </div>
       </div>
