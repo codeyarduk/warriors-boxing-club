@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body id="top">
     <!-- HEADER -->
     <header
       id="header"
       class="header flex flex-row justify-between items-center py-6 px-7 fixed w-full z-10 xl:py-9"
     >
       <div class="flex flex-row items-start">
-        <img src="resources/icons/mobile-warrior-logo.png" class="fixed" />
-        <p
+        <a href="#top"><img src="resources/icons/mobile-warrior-logo.svg" class="fixed" /></a>
+        <a
           id="header-text"
           class="text-white font-syne font-extrabold text-lg ml-[34px]"
+          href="#top"
         >
           ARRIORS
-        </p>
+      </a>
       </div>
       <div>
         <img
@@ -47,7 +48,7 @@
             <a
               onClick="toggleDropdownMenu()"
               class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mt-[80px]"
-              href="#home"
+              href="/"
               >Home</a
             >
             <a
@@ -59,13 +60,13 @@
             <a
               onClick="toggleDropdownMenu()"
               class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
-              href="#staff"
+              href="/staff"
               >Staff</a
             >
             <a
               onClick="toggleDropdownMenu()"
               class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
-              href="#contact"
+              href="#facilities"
               >Facilities</a
             >
             <a
@@ -144,12 +145,15 @@
     <div
       class="bg-warriorBlueBg text-center flex flex-col justify-center mt-24 pt-20"
     >
-      <p class="text-white font-syne font-extrabold text-3xl px-5">
-        Why Choose Warriors Box Club?
-      </p>
-      <p class="text-white font-syne font-semibold text-lg pt-4">
-        Because we provide you with...
-      </p>
+      <div class="flex flex-col justify-center items-center">
+        <p class="text-white font-syne font-extrabold text-3xl max-w-[338px]">
+          Why Choose Warriors Box Club?
+        </p>
+        <p class="text-white font-syne font-semibold text-lg pt-4">
+          Because we provide you with...
+        </p>
+      </div>
+
       <div class="flex flex-col justify-items-center pb-28">
         <!-- EXPERT COACHES -->
         <div
@@ -170,7 +174,7 @@
           class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
         >
           <div class="flex justify-center pb-5">
-            <img src="resources/icons/group-people.svg" />
+            <img src="resources/icons/group-people.svg"/>
           </div>
 
           <p class="text-white font-syne font-bold pb-4">Community</p>
@@ -209,7 +213,7 @@
         </div>
       </div>
       <!-- OUT FACILITIES -->
-      <div class="h-[52.5rem] bg-[#EFF3F8]">
+      <div class="h-[52.5rem] bg-[#EFF3F8]" id="facilities">
         <img
           src="resources\bags.png"
           alt="Punching Bags"
@@ -348,7 +352,7 @@
 
     <!-- Our featured packages section -->
     <div
-      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36"
+      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36" id="membership"
     >
       <p
         class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16"
@@ -435,6 +439,7 @@
     <!-- About Us Section -->
     <div
       class="flex flex-col justify-center items-center font-syne lg:flex-row"
+      id="about"
     >
       <div
         class="lg:w-[816px] flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:py-[120px]"
