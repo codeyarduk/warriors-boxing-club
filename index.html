@@ -25,67 +25,55 @@
         </a>
       </div>
       <div>
-        <img
-          id="header-mobile-image-black"
-          src="resources/icons/burger-right-dark-blue.png"
-          class="hidden"
-          onClick="toggleDropdownMenu()"
-        />
         <!-- DROP DOWN MENU  -->
-        <div onClick="toggleDropdownMenu()">
+        <div id="navbtn" class="z-10">
           <img
             id="header-mobile-image-white"
             src="resources/icons/burger-right.png"
-            class="cursor-pointer menu-icon xl:hidden"
+            class="cursor-pointer"
             loading="lazy"
             alt="knockout boxing logo"
           />
+          <img
+            id="header-mobile-image-black"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0"
+          />
         </div>
         <div
-          class="bg-white shadow-md hidden top-[74px] left-0 h-full fixed"
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-[130vw] -z-10"
           id="dropdown"
         >
           <div
             class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
           >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mt-[80px]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
               href="/"
               >Home</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#about"
               >About</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="/staff"
               >Staff</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#facilities"
               >Facilities</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px]"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
               href="#membership"
               >Membership</a
             >
           </div>
         </div>
-        <script>
-          function toggleDropdownMenu() {
-            let dropdownButton = document.querySelector("#dropdown");
-            dropdown.classList.toggle("hidden");
-          }
-        </script>
       </div>
     </header>
     <!-- HERO SECTION -->
