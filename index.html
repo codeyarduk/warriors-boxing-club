@@ -9,18 +9,41 @@
     <!-- HEADER -->
     <header
       id="header"
-      class="header flex flex-row justify-between items-center py-6 px-7 fixed w-full z-10 xl:py-9"
+      class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
     >
-      <div class="flex flex-row items-start">
-        <a href="#top"><img src="resources/icons/mobile-warrior-logo.svg" class="fixed" /></a>
-        <a
-          id="header-text"
-          class="text-white font-syne font-extrabold text-lg ml-[34px]"
-          href="#top"
+      <div
+        class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+      >
+        <div>
+          <a href="#top"
+            ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+          /></a>
+          <a
+            id="header-text"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] lg:hidden"
+            href="#top"
+          >
+            ARRIORS
+          </a>
+          <a
+            id="header-text"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+            href="#top"
+          >
+            ARRIORS BOXING CLUB
+          </a>
+        </div>
+        <div
+          class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
         >
-          ARRIORS
-      </a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="/staff">Staff</a>
+          <a href="#facilities">Facilities</a>
+          <a href="#membership">Membership</a>
+        </div>
       </div>
+
       <div>
         <img
           id="header-mobile-image-black"
@@ -29,11 +52,11 @@
           onClick="toggleDropdownMenu()"
         />
         <!-- DROP DOWN MENU  -->
-        <div onClick="toggleDropdownMenu()">
+        <div onClick="toggleDropdownMenu()" class="w-[40px]">
           <img
             id="header-mobile-image-white"
             src="resources/icons/burger-right.png"
-            class="cursor-pointer menu-icon xl:hidden"
+            class="cursor-pointer w-full menu-icon xl:hidden"
             loading="lazy"
             alt="knockout boxing logo"
           />
@@ -81,176 +104,232 @@
           function toggleDropdownMenu() {
             let dropdownButton = document.querySelector("#dropdown");
             dropdown.classList.toggle("hidden");
-
           }
-
         </script>
       </div>
     </header>
     <!-- HERO SECTION -->
+
     <div
-      class="bg-[url('/resources/mobile-hero-image.png')] h-[638px] flex flex-col"
+      class="flex justify-center bg-left bg-auto bg-no-repeat h-[638px] bg-[url('/resources/hero-mobile.png')] lg:bg-[url('/resources/hero-tablet.png')] xl:h-[700px] xl:bg-[url('/resources/hero-desktop.png')]"
     >
-      <p
-        class="font-extrabold font-syne text-white text-[40px] text-center leading-10 pt-[153px] px-6"
+      <div
+        class="flex flex-row justify-center lg:w-[1158px] lg:ml-24 lg:justify-between xl:ml-0"
       >
-        Unleash Your Inner Warrior
-      </p>
-      <p
-        class="font-semibold font-syne text-white text-lg leading-5 text-center pt-8 px-6"
-      >
-        Join Warriors Boxing Club to boost your physical and mental resilience,
-        with support from our community and coaches, regardless of your
-        experience level. Begin your transformation today.
-      </p>
-      <button
-        class="bg-white text-black font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg self-center"
-      >
-        Join now
-      </button>
+        <div
+          class="max-w-[768px] items-center flex flex-col pt-0 lg:pt-8 xl:pt-16"
+        >
+          <p
+            class="font-extrabold font-syne text-white px-8 lg:px-0 text-[40px] max-w-[600px] text-center leading-10 pt-[153px] lg:leading-[59px] lg:text-[64px] lg:text-left lg:max-w-[900px] xl:text-7xl"
+          >
+            Unleash Your Inner Warrior
+          </p>
+          <p
+            class="font-semibold px-8 lg:px-0 font-syne text-white text-lg leading-5 text-center pt-8 lg:text-left lg:text-base"
+          >
+            Join Warriors Boxing Club to boost your physical and mental
+            resilience, with support from our community and coaches, regardless
+            of your experience level. Begin your transformation today.
+          </p>
+          <button
+            class="bg-white text-black font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg lg:bg-[#DC006F] lg:text-white lg:max-w-72 lg:self-start"
+          >
+            Join now
+          </button>
+        </div>
+        <div class="hidden lg:block"></div>
+      </div>
     </div>
     <!-- WHAT BOXERS HAVE TO SAY SECTION -->
-    <div class="text-center flex flex-col justify-center pt-20">
-      <p class="font-syne font-extrabold text-base max-w-80 self-center">
+    <div class="text-center flex flex-col justify-center pt-20 pb-10">
+      <p
+        class="font-syne font-extrabold text-base max-w-80 max self-center lg:text-lg lg:max-w-[600px] xl:text-xl"
+      >
         What Our Boxers Have To Say
       </p>
+      <!-- STATEMENTS -->
+
       <!-- STATEMENT 1 -->
-      <p
-        class="font-syne font-medium text-xl leading-7 max-w-96 px-5 self-center pt-14"
-      >
-        <span class="text-[#DC006F] text-2xl font-extrabold">"</span> Warriors
-        Boxing Club isn't just a gym, it's a family. The coaches pushed me
-        beyond what I thought was possible, and I've never felt stronger.
-        <span class="text-[#DC006F] text-2xl font-extrabold">"</span>
-      </p>
-      <p class="font-syne font-bold text-base max-w-80 self-center pt-3">
-        - Alex J.
-      </p>
     </div>
-    <!-- STATEMENT 2 -->
-    <div class="text-center flex flex-col justify-center pt-12">
-      <p
-        class="font-syne font-medium text-xl leading-7 max-w-96 px-5 self-center"
-      >
-        <span class="text-[#DC006F] text-2xl font-extrabold">"</span> I was
-        looking for a place not just to work out, but to truly learn the art of
-        boxing. Warriors Boxing Club exceeded all my expectations.
-        <span class="text-[#DC006F] text-2xl font-extrabold">"</span>
-      </p>
-      <p class="font-syne font-bold text-base max-w-80 self-center pt-3">
-        - Samira K.
-      </p>
+    <div class="text-center flex flex-col justify-center pt-0 lg:flex-row">
+      <div class="flex flex-col items-center lg:px-9 xl:max-w-[550px]">
+        <p
+          class="font-syne font-medium text-xl leading-7 max-w-96 h-36 px-5 self-center pt-0 xl:max-w-[550px]"
+        >
+          <span class="text-[#DC006F] text-2xl font-extrabold">"</span> Warriors
+          Boxing Club isn't just a gym, it's a family. The coaches pushed me
+          beyond what I thought was possible, and I've never felt stronger.
+          <span class="text-[#DC006F] text-2xl font-extrabold">"</span>
+        </p>
+        <p
+          class="font-syne font-bold text-base max-w-80 self-center pt-3 pb-8 lg:pb-0 xl:pt-0"
+        >
+          - Alex J.
+        </p>
+      </div>
+      <!-- STATEMENT 2 -->
+      <div class="flex flex-col items-center lg:px-9 xl:max-w-[550px]">
+        <p
+          class="font-syne font-medium text-xl leading-7 max-w-96 h-36 px-5 self-center pt-0 xl:max-w-[550px]"
+        >
+          <span class="text-[#DC006F] text-2xl font-extrabold">"</span> I was
+          looking for a place not just to work out, but to truly learn the art
+          of boxing. Warriors Boxing Club exceeded all my expectations.
+          <span class="text-[#DC006F] text-2xl font-extrabold">"</span>
+        </p>
+        <p
+          class="font-syne font-bold text-base max-w-80 self-center pt-3 xl:pt-0"
+        >
+          - Samira K.
+        </p>
+      </div>
     </div>
     <!-- WHY CHOOSE WARRIORS SECTION -->
     <div
       class="bg-warriorBlueBg text-center flex flex-col justify-center mt-24 pt-20"
     >
       <div class="flex flex-col justify-center items-center">
-        <p class="text-white font-syne font-extrabold text-3xl max-w-[338px]">
+        <p
+          class="text-white font-syne font-extrabold text-3xl max-w-[338px] lg:max-w-[900px]"
+        >
           Why Choose Warriors Box Club?
         </p>
-        <p class="text-white font-syne font-semibold text-lg pt-4">
+        <p class="text-white font-syne font-semibold text-lg pt-4 pb-8">
           Because we provide you with...
         </p>
       </div>
 
-      <div class="flex flex-col justify-items-center pb-28">
+      <div
+        class="flex self-center flex-col justify-items-center pb-28 xl:flex-row xl:justify-between xl:max-w-[1152px]"
+      >
         <!-- EXPERT COACHES -->
-        <div
-          class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-12 pt-12"
-        >
-          <div class="flex justify-center pb-5">
-            <img src="resources/icons/glove.svg" height="33.33" width="31.67" />
-          </div>
-
-          <p class="text-white font-syne font-bold pb-4">Expert Coaches</p>
-          <p class="text-white font-syne px-6">
-            Our certified trainers are passionate about boxing and dedicated to
-            your growth.
-          </p>
-        </div>
-        <!-- COMMUNITY -->
-        <div
-          class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
-        >
-          <div class="flex justify-center pb-5">
-            <img src="resources/icons/group-people.svg"/>
-          </div>
-
-          <p class="text-white font-syne font-bold pb-4">Community</p>
-          <p class="text-white font-syne px-6">
-            Join a supportive community that motivates and challenges you.
-          </p>
-        </div>
-        <!-- STATE OF THE ART -->
-        <div
-          class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
-        >
-          <div class="flex justify-center pb-5">
-            <img src="resources/icons/pin.svg" />
-          </div>
-
-          <p class="text-white font-syne font-bold pb-4">
-            State-of-the-Art Facility
-          </p>
-          <p class="text-white font-syne px-6">
-            Train like a pro with our top-notch boxing rings and equipment.
-          </p>
-        </div>
-        <!-- HOLISTIC APPROACH -->
-        <div
-          class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
-        >
-          <div class="flex justify-center pb-5">
-            <img src="resources/icons/flexed-arm.svg" />
-          </div>
-
-          <p class="text-white font-syne font-bold pb-4">Holistic Approach</p>
-          <p class="text-white font-syne px-6">
-            We focus on all aspects of training, from technique to strength and
-            conditioning.
-          </p>
-        </div>
-      </div>
-      <!-- OUT FACILITIES -->
-      <div class="h-[52.5rem] bg-[#EFF3F8]" id="facilities">
-        <img
-          src="resources\bags.png"
-          alt="Punching Bags"
-          class="block m-auto mt-24 pt-2"
-          width="192"
-          height="192"
-        />
-        <div class="flex flex-col">
-          <p class="font-extrabold font-syne text-center pt-14 pb-4 text-2xl">
-            Our Facilities
-          </p>
-          <p
-            class="flex font-syne text-center justify-self-center self-center w-80"
+        <div class="flex flex-col lg:flex-row justify-center">
+          <div
+            class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-4 pt-12 mx-2 lg:max-w-[400px] xl:max-w-[272px]"
           >
-            Explore our cutting-edge facility, designed to cater to both
-            beginners and seasoned boxers. Our gym boasts
-          </p>
-          <div>
-            <ul class="font-syne font-semibold px-6">
-              <li class="pt-8">&#x2022; Professional Boxing Rings</li>
-              <li class="pt-2">
-                &#x2022; Comprehensive Weight and Cardio Equipment
-              </li>
-              <li class="pt-2">
-                &#x2022; Dedicated Bag Area with Various Types of Punching Bags
-              </li>
-              <li class="pt-2">&#x2022; Clean, Modern Changing Rooms</li>
-            </ul>
-            <button
-              class="bg-[#DC006F] text-white font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg"
-            >
-              View All
-            </button>
+            <div class="flex justify-center pb-5">
+              <img
+                src="resources/icons/glove.svg"
+                height="33.33"
+                width="31.67"
+              />
+            </div>
+
+            <p class="text-white font-syne font-bold pb-4">Expert Coaches</p>
+            <p class="text-white font-syne px-6">
+              Our certified trainers are passionate about boxing and dedicated
+              to your growth.
+            </p>
+          </div>
+          <!-- COMMUNITY -->
+          <div
+            class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-4 pt-12 mx-2 lg:max-w-[400px] xl:max-w-[272px]"
+          >
+            <div class="flex justify-center pb-5">
+              <img src="resources/icons/group-people.svg" />
+            </div>
+
+            <p class="text-white font-syne font-bold pb-4">Community</p>
+            <p class="text-white font-syne px-6">
+              Join a supportive community that motivates and challenges you.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-center">
+          <!-- STATE OF THE ART -->
+          <div
+            class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-4 pt-12 mx-2 lg:max-w-[400px] xl:max-w-[272px]"
+          >
+            <div class="flex justify-center pb-5">
+              <img src="resources/icons/pin.svg" />
+            </div>
+
+            <p class="text-white font-syne font-bold pb-4">
+              State-of-the-Art Facility
+            </p>
+            <p class="text-white font-syne px-6">
+              Train like a pro with our top-notch boxing rings and equipment.
+            </p>
+          </div>
+          <!-- HOLISTIC APPROACH -->
+          <div
+            class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-4 pt-12 mx-2 lg:max-w-[400px] xl:max-w-[272px]"
+          >
+            <div class="flex justify-center pb-5">
+              <img src="resources/icons/flexed-arm.svg" />
+            </div>
+
+            <p class="text-white font-syne font-bold pb-4">Holistic Approach</p>
+            <p class="text-white font-syne px-6">
+              We focus on all aspects of training, from technique to strength
+              and conditioning.
+            </p>
           </div>
         </div>
       </div>
     </div>
+    <!-- OUT FACILITIES -->
+    <div
+      class="h-[52.5rem] bg-[#EFF3F8] flex flex-col pb-20 lg:h-[42rem] lg:flex-row lg:justify-center"
+      id="facilities"
+    >
+      <img
+        src="resources\bags.png"
+        alt="Punching Bags"
+        class="block m-auto mt-24 pt-2 lg:hidden"
+        width="192"
+        height="192"
+      />
+      <div
+        class="flex flex-col lg:pt-20 lg:text-left lg:max-w-96 xl:max-w-[528px] lg:mr-20 xl:pt-28"
+      >
+        <p
+          class="font-extrabold font-syne pt-14 pb-4 text-2xl lg:text-[28px] lg:pb-2"
+        >
+          Our Facilities
+        </p>
+        <p class="flex font-syne self-center w-full lg:self-auto">
+          Explore our cutting-edge facility, designed to cater to both beginners
+          and seasoned boxers. Our gym boasts
+        </p>
+        <div class="">
+          <ul class="font-syne font-semibold px-6 lg:px-0">
+            <li class="pt-8 pl-2 lg:pt-6">
+              &#x2022; Professional Boxing Rings
+            </li>
+            <li class="pt-2 pl-2">
+              &#x2022; Comprehensive Weight and Cardio Equipment
+            </li>
+            <li class="pt-2 pl-2">
+              &#x2022; Dedicated Bag Area with Various Types of Punching Bags
+            </li>
+            <li class="pt-2 pl-2">&#x2022; Clean, Modern Changing Rooms</li>
+          </ul>
+          <button
+            class="bg-[#DC006F] text-white font-syne py-3 max-w-80 font-bold text-[14px] w-full mt-12 rounded-lg lg:mt-10 lg:max-w-[260px]"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="resources\bags-tablet.png"
+          alt="Punching Bags"
+          class="m-auto mt-24 pt-2 hidden lg:block xl:hidden"
+          width="364"
+          height="433"
+        />
+        <img
+          src="resources\bags-desktop.png"
+          alt="Punching Bags"
+          class="m-auto mt-24 pt-2 hidden xl:block"
+          width="528"
+          height="433"
+        />
+      </div>
+    </div>
+
     <!-- Location Section -->
     <div class="font-syne flex flex-col justify-center items-center py-[100px]">
       <div
@@ -352,7 +431,8 @@
 
     <!-- Our featured packages section -->
     <div
-      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36" id="membership"
+      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36"
+      id="membership"
     >
       <p
         class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16"
