@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body id="top">
     <!-- HEADER -->
@@ -12,79 +14,72 @@
       class="header flex flex-row justify-between items-center py-6 px-7 fixed w-full z-10 xl:py-9"
     >
       <div class="flex flex-row items-start">
-        <a href="#top"><img src="resources/icons/mobile-warrior-logo.svg" class="fixed" /></a>
+        <a href="#top"
+          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+        /></a>
         <a
           id="header-text"
           class="text-white font-syne font-extrabold text-lg ml-[34px]"
           href="#top"
         >
           ARRIORS
-      </a>
+        </a>
       </div>
       <div>
-        <img
-          id="header-mobile-image-black"
-          src="resources/icons/burger-right-dark-blue.png"
-          class="hidden"
-          onClick="toggleDropdownMenu()"
-        />
         <!-- DROP DOWN MENU  -->
-        <div onClick="toggleDropdownMenu()">
+        <div id="navbtn" class="z-10 relative w-8 h-4">
           <img
-            id="header-mobile-image-white"
+            id="white-burger"
             src="resources/icons/burger-right.png"
-            class="cursor-pointer menu-icon xl:hidden"
+            class="cursor-pointer absolute"
             loading="lazy"
             alt="knockout boxing logo"
           />
+          <img
+            id="black-burger"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
+            class="cursor-pointer opacity-0 absolute"
+          />
         </div>
         <div
-          class="bg-white shadow-md hidden top-[74px] left-0 h-full fixed"
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
           id="dropdown"
         >
           <div
             class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
           >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mt-[80px]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
               href="/"
               >Home</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#about"
               >About</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="/staff"
               >Staff</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#facilities"
               >Facilities</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px]"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
               href="#membership"
               >Membership</a
             >
           </div>
         </div>
-        <script>
-          function toggleDropdownMenu() {
-            let dropdownButton = document.querySelector("#dropdown");
-            dropdown.classList.toggle("hidden");
-
-          }
-
-        </script>
       </div>
     </header>
     <!-- HERO SECTION -->
@@ -110,7 +105,7 @@
       </button>
     </div>
     <!-- WHAT BOXERS HAVE TO SAY SECTION -->
-    <div class="text-center flex flex-col justify-center pt-20">
+    <div class="text-center flex flex-col justify-center pt-20 change-white">
       <p class="font-syne font-extrabold text-base max-w-80 self-center">
         What Our Boxers Have To Say
       </p>
@@ -174,7 +169,7 @@
           class="bg-warriorDarkBlueBg text-center self-center flex flex-col h-64 max-w-80 mt-5 pt-12"
         >
           <div class="flex justify-center pb-5">
-            <img src="resources/icons/group-people.svg"/>
+            <img src="resources/icons/group-people.svg" />
           </div>
 
           <p class="text-white font-syne font-bold pb-4">Community</p>
@@ -354,7 +349,8 @@
 
     <!-- Our featured packages section -->
     <div
-      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36" id="membership"
+      class="flex flex-col justify-center items-center bg-warriorBlueBg text-white pt-36"
+      id="membership"
     >
       <p
         class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16 xl:text-[40px] xl:w-[755px]"
