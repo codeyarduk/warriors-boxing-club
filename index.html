@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body id="top">
     <!-- HEADER -->
@@ -28,15 +29,20 @@
         <!-- DROP DOWN MENU  -->
         <div id="navbtn" class="z-10 relative w-8 h-4">
           <img
-            id="header-mobile-image-white"
+            id="white-burger"
             src="resources/icons/burger-right.png"
             class="cursor-pointer absolute"
             loading="lazy"
             alt="knockout boxing logo"
           />
           <img
-            id="header-mobile-image-black"
+            id="black-burger"
             src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
             class="cursor-pointer opacity-0 absolute"
           />
         </div>
@@ -99,7 +105,7 @@
       </button>
     </div>
     <!-- WHAT BOXERS HAVE TO SAY SECTION -->
-    <div class="text-center flex flex-col justify-center pt-20">
+    <div class="text-center flex flex-col justify-center pt-20 change-white">
       <p class="font-syne font-extrabold text-base max-w-80 self-center">
         What Our Boxers Have To Say
       </p>

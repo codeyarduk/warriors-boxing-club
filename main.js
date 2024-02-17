@@ -1,57 +1,3 @@
-/*_   _                _           
-| | | | ___  __ _  __| | ___ _ __ 
-| |_| |/ _ \/ _` |/ _` |/ _ \ '__|
-|  _  |  __/ (_| | (_| |  __/ |   
-|_| |_|\___|\__,_|\__,_|\___|_|   
-                                  
- ____             _                                   _               
-| __ )  __ _  ___| | ____ _ _ __ ___  _   _ _ __   __| |   ___  _ __  
-|  _ \ / _` |/ __| |/ / _` | '__/ _ \| | | | '_ \ / _` |  / _ \| '_ \ 
-| |_) | (_| | (__|   < (_| | | | (_) | |_| | | | | (_| | | (_) | | | |
-|____/ \__,_|\___|_|\_\__, |_|  \___/ \__,_|_| |_|\__,_|  \___/|_| |_|
-                      |___/                                           
- ____                 _ _ 
-/ ___|  ___ _ __ ___ | | |
-\___ \ / __| '__/ _ \| | |
- ___) | (__| | | (_) | | |
-|____/ \___|_|  \___/|_|_|
-*/
-/*
-const changeBg = () => {
-  let header = document.getElementById("header");
-  let scrollValue = window.scrollY;
-  console.log(scrollValue);
-
-  if (scrollValue > 75) {
-    header.classList.add("transition-all");
-    header.classList.add("bg-white");
-    document
-      .getElementById("header-mobile-image-white")
-      .classList.add("hidden");
-    document
-      .getElementById("header-mobile-image-black")
-      .classList.remove("hidden");
-    document
-      .getElementById("header-text")
-      .classList.add("text-warriorDarkBlueBg");
-    document.getElementById("header-text").classList.remove("text-white");
-  } else {
-    header.classList.remove("bg-white");
-    document
-      .getElementById("header-mobile-image-black")
-      .classList.add("hidden");
-    document
-      .getElementById("header-mobile-image-white")
-      .classList.remove("hidden");
-    document
-      .getElementById("header-text")
-      .classList.remove("text-warriorDarkBlueBg");
-    document.getElementById("header-text").classList.add("text-white");
-  }
-};
-
-window.addEventListener("scroll", changeBg);
-*/
 /*
     _          _                 _   _                 
    / \   _ __ (_)_ __ ___   __ _| |_(_) ___  _ __  ___ 
@@ -67,8 +13,6 @@ var tl = gsap.timeline({ paused: true });
 // Logic for applying animation
 function openNav() {
   animateOpenNav();
-  var navBtnWht = document.getElementById("header-mobile-image-white");
-  var navBtnBlk = document.getElementById("header-mobile-image-black");
   var navBtn = document.getElementById("navbtn");
   var link = document.querySelectorAll(".menu-link");
   navBtn.onclick = function () {
@@ -86,26 +30,35 @@ function openNav() {
 // The animation
 function animateOpenNav() {
   var mobileNav = document.getElementById("dropdown");
-  var blackBurger = document.getElementById("header-mobile-image-white");
-  var whiteBurger = document.getElementById("header-mobile-image-black");
+  var whiteBurger = document.getElementById("white-burger");
+  var blackBurger = document.getElementById("black-burger");
+  var openBurger = document.getElementById("open-burger");
   var headerText = document.getElementById("header-text");
+  //Bring the white dropdown onto screen
   tl.to(mobileNav, {
     duration: 0.3,
     ease: "power3.out",
     y: 0,
+    // Stop scrolling when dropdown is open, this fixes bugs with the white header change
+    onStart: () =>
+      document.querySelector(".scroll-smooth").classList.add("overflow-hidden"),
+    onReverseComplete: () =>
+      document
+        .querySelector(".scroll-smooth")
+        .classList.remove("overflow-hidden"),
   });
   // Animate the transition between the hamburger icons
   tl.to(
-    blackBurger,
+    openBurger,
     {
-      opacity: 0,
+      opacity: 1,
     },
     "<",
   );
   tl.to(
-    whiteBurger,
+    [whiteBurger, blackBurger],
     {
-      opacity: 1,
+      opacity: 0,
     },
     "<",
   );
@@ -116,6 +69,7 @@ function animateOpenNav() {
     },
     "<",
   );
+  // Animate the menu links fading in
   tl.to(
     ".menu-link",
     {
@@ -134,3 +88,49 @@ function animateOpenNav() {
 
 // init
 openNav();
+
+// Changing header background from dark to light on scroll.
+gsap.registerPlugin(ScrollTrigger);
+
+var header = document.getElementById("header");
+var whiteBurger = document.getElementById("white-burger");
+var blackBurger = document.getElementById("black-burger");
+var headerText = document.getElementById("header-text");
+var scrollWhite = gsap.timeline();
+scrollWhite.to(header, {
+  scrollTrigger: {
+    trigger: ".change-white", // start animation when ".change-white" div enters the viewport
+    start: "top 74px",
+    end: "top 74px",
+    scrub: true,
+  },
+  backgroundColor: "white",
+});
+scrollWhite.to(headerText, {
+  scrollTrigger: {
+    trigger: ".change-white", // start animation when ".change-white" div enters the viewport
+    start: "top 74px",
+    end: "top 74px",
+    scrub: true,
+  },
+  color: "black",
+});
+scrollWhite.to(whiteBurger, {
+  scrollTrigger: {
+    trigger: ".change-white", // start animation when ".change-white" div enters the viewport
+    start: "top 74px",
+    end: "top 74px",
+    scrub: true,
+  },
+  opacity: 0,
+});
+
+scrollWhite.to(blackBurger, {
+  scrollTrigger: {
+    trigger: ".change-white", // start animation when ".change-white" div enters the viewport
+    start: "top 74px",
+    end: "top 74px",
+    scrub: true,
+  },
+  opacity: 1,
+});
