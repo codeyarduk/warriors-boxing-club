@@ -90,43 +90,46 @@ function animateOpenNav() {
   var whiteBurger = document.getElementById("header-mobile-image-black");
   var headerText = document.getElementById("header-text");
   tl.to(mobileNav, {
-    duration: 1,
+    duration: 0.3,
     ease: "power3.out",
     y: 0,
-  })
-    .to(".menu-link", {
+  });
+  // Animate the transition between the hamburger icons
+  tl.to(
+    blackBurger,
+    {
+      opacity: 0,
+    },
+    "<",
+  );
+  tl.to(
+    whiteBurger,
+    {
+      opacity: 1,
+    },
+    "<",
+  );
+  tl.to(
+    headerText,
+    {
+      color: "black",
+    },
+    "<",
+  );
+  tl.to(
+    ".menu-link",
+    {
       opacity: 1,
       y: 0,
-      duration: 1,
+      delay: 0.2,
       stagger: {
         // wrap advanced options in an object
-        each: 0.2,
+        each: 0.1,
         ease: "power1.in",
       },
-    })
-    // Animate the transition between the hamburger icons
-    .to(
-      blackBurger,
-      {
-        opacity: 0,
-      },
-      "<",
-    )
-    .to(
-      whiteBurger,
-      {
-        opacity: 1,
-      },
-      "<",
-    )
-    .to(
-      headerText,
-      {
-        color: "black",
-      },
-      "<",
-    )
-    .reverse(); // Finally reverse the timeline. reversed() is true
+    },
+    "<",
+  ).reverse(); // Finally reverse the timeline. reversed() is true
 }
 
 // init
