@@ -34,6 +34,7 @@ function animateOpenNav() {
   var blackBurger = document.getElementById("black-burger");
   var openBurger = document.getElementById("open-burger");
   var headerText = document.getElementById("header-text");
+  var headerTextDesk = document.getElementById("header-text-desktop");
   //Bring the white dropdown onto screen
   tl.to(mobileNav, {
     duration: 0.3,
@@ -63,7 +64,7 @@ function animateOpenNav() {
     "<",
   );
   tl.to(
-    headerText,
+    [headerText, headerTextDesk],
     {
       color: "black",
     },
@@ -96,6 +97,8 @@ var header = document.getElementById("header");
 var whiteBurger = document.getElementById("white-burger");
 var blackBurger = document.getElementById("black-burger");
 var headerText = document.getElementById("header-text");
+var headerTextDesk = document.getElementById("header-text-desktop");
+var headerLink = document.getElementById("header-links");
 var scrollWhite = gsap.timeline();
 scrollWhite.to(header, {
   scrollTrigger: {
@@ -106,7 +109,7 @@ scrollWhite.to(header, {
   },
   backgroundColor: "white",
 });
-scrollWhite.to(headerText, {
+scrollWhite.to([headerText, headerTextDesk, headerLink], {
   scrollTrigger: {
     trigger: ".change-white", // start animation when ".change-white" div enters the viewport
     start: "top 74px",
