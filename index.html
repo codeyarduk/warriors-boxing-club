@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body id="top">
     <!-- HEADER -->
@@ -26,7 +28,7 @@
             ARRIORS
           </a>
           <a
-            id="header-text"
+            id="header-text-desktop"
             class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
             href="#top"
           >
@@ -34,6 +36,7 @@
           </a>
         </div>
         <div
+          id="header-links"
           class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
         >
           <a href="#home">Home</a>
@@ -43,69 +46,61 @@
           <a href="#membership">Membership</a>
         </div>
       </div>
-
-      <div>
-        <img
-          id="header-mobile-image-black"
-          src="resources/icons/burger-right-dark-blue.png"
-          class="hidden"
-          onClick="toggleDropdownMenu()"
-        />
+      <div class="flex items-center">
         <!-- DROP DOWN MENU  -->
-        <div onClick="toggleDropdownMenu()" class="w-[40px]">
+        <div id="navbtn" class="z-10 relative w-8 h-4">
           <img
-            id="header-mobile-image-white"
+            id="white-burger"
             src="resources/icons/burger-right.png"
-            class="cursor-pointer w-full menu-icon xl:hidden"
+            class="cursor-pointer absolute xl:hidden"
             loading="lazy"
             alt="knockout boxing logo"
           />
+          <img
+            id="black-burger"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
         </div>
         <div
-          class="bg-white shadow-md hidden top-[74px] left-0 h-full fixed"
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
           id="dropdown"
         >
           <div
             class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
           >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mt-[80px]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
               href="/"
               >Home</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#about"
               >About</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="/staff"
               >Staff</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF]"
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
               href="#facilities"
               >Facilities</a
             >
             <a
-              onClick="toggleDropdownMenu()"
-              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px]"
+              class="cursor-pointer menu-icon py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
               href="#membership"
               >Membership</a
             >
           </div>
         </div>
-        <script>
-          function toggleDropdownMenu() {
-            let dropdownButton = document.querySelector("#dropdown");
-            dropdown.classList.toggle("hidden");
-          }
-        </script>
       </div>
     </header>
     <!-- HERO SECTION -->
@@ -141,7 +136,9 @@
       </div>
     </div>
     <!-- WHAT BOXERS HAVE TO SAY SECTION -->
-    <div class="text-center flex flex-col justify-center pt-20 pb-10">
+    <div
+      class="text-center flex flex-col justify-center pt-20 pb-10 change-white"
+    >
       <p
         class="font-syne font-extrabold text-base max-w-80 max self-center lg:text-lg lg:max-w-[600px] xl:text-xl"
       >
@@ -184,6 +181,7 @@
         </p>
       </div>
     </div>
+
     <!-- WHY CHOOSE WARRIORS SECTION -->
     <div
       class="bg-warriorBlueBg text-center flex flex-col justify-center mt-24 pt-20"
@@ -333,22 +331,28 @@
     <!-- Location Section -->
     <div class="font-syne flex flex-col justify-center items-center py-[100px]">
       <div
-        class="flex flex-col justify-center items-center lg:flex-row lg:w-[816px] lg:justify-between"
+        class="flex flex-col justify-center items-center lg:flex-row lg:w-[816px] lg:justify-between xl:w-[1136px]"
       >
         <img
           class="lg:hidden"
           src="./resources/location-image.png"
           alt="Map of bath where warriors boxing gym is located"
         />
-        <img
-          class="hidden lg:block"
-          src="./resources/tablet-location.png"
-          alt="Map of bath where warriors boxing gym is located"
-        />
         <div
-          class="w-[336px] flex flex-col items-center justify-center text-center pt-16 lg:text-start lg:items-start lg:pt-0"
+          class="lg:flex lg:justify-center lg:items-center lg:w-[364px] lg:h-[319px] lg:rounded-[4px] lg:overflow-hidden xl:w-[528px]"
         >
-          <p class="font-extrabold leading-[25.8px] text-2xl">Location</p>
+          <img
+            class="hidden lg:block relative max-w-[528px]"
+            src="./resources/desktop-location.png"
+            alt="Map of bath where warriors boxing gym is located"
+          />
+        </div>
+        <div
+          class="w-[336px] flex flex-col items-center justify-center text-center pt-16 lg:text-start lg:items-start lg:pt-0 xl:w-[527px]"
+        >
+          <p class="font-extrabold leading-[25.8px] text-2xl xl:text-[32px]">
+            Location
+          </p>
           <p class="pt-5 leading-[19.2px] lg:pt-4">
             Proudly serving the greater
             <span class="font-bold">Bath</span> area. Whether you're a local or
@@ -366,10 +370,14 @@
     <div
       class="hidden font-syne lg:flex lg:flex-col lg:justify-center lg:items-center lg:bg-[#EFF3F8]"
     >
-      <p class="font-extrabold text-[22px] leading-5 pt-[120px] pb-4">
+      <p
+        class="font-extrabold text-[22px] leading-5 pt-[120px] pb-4 xl:text-2xl xl:leading-[22px]"
+      >
         Who Can Join?
       </p>
-      <p class="font-bold text-base leading-[19.2px] pb-16">
+      <p
+        class="font-bold text-base leading-[19.2px] pb-16 xl:text-lg xl:leading-[21.6px]"
+      >
         Warriors Boxing Club welcomes everyone
       </p>
       <div class="flex flex-row pb-[120px]">
@@ -381,7 +389,9 @@
               height="24"
               alt="White check-mark with circular pink background"
             />
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+            <p
+              class="text-lg leading-[21.6px] w-[324px] pl-[16px] xl:w-[390px]"
+            >
               <span class="font-semibold">Beginners</span> eager to learn the
               basics
             </p>
@@ -393,7 +403,9 @@
               height="24"
               alt="White check-mark with circular pink background"
             />
-            <p class="text-lg leading-[21.6px] w-[324px] pl-[16px]">
+            <p
+              class="text-lg leading-[21.6px] w-[324px] pl-[16px] xl:w-[390px]"
+            >
               <span class="font-semibold">Fitness enthusiasts</span> seeking a
               new challenge
             </p>
@@ -435,76 +447,92 @@
       id="membership"
     >
       <p
-        class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16"
+        class="font-syne font-extrabold text-2xl w-[336px] text-center pb-12 lg:w-[604px] lg:text-[32px] lg:pb-16 xl:text-[40px] xl:w-[755px]"
       >
         Our Featured Packages
       </p>
       <div class="flex justify-center flex-col items-center lg:items-end">
-        <div class="flex flex-col lg:flex-row lg:w-[816px] lg:justify-between">
+        <div
+          class="flex flex-col lg:flex-row lg:w-[816px] lg:justify-between xl:w-[1136px]"
+        >
           <!-- First Item in flex column -->
           <div
-            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px] xl:w-[368px] xl:h-[388px]"
           >
             <div
               class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]"
             >
               <p class="font-extrabold text-center">Beginners Bootcamp</p>
-              <p class="text-lg font-semibold py-8">
-                <span class="text-[56px] font-bold lg:text-5xl">$29</span>/month
+              <p class="text-lg font-semibold py-8 xl:py-5">
+                <span class="text-[56px] font-bold lg:text-5xl xl:text-[56px]"
+                  >$29</span
+                >/month
               </p>
               <div
-                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]"
+                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px] xl:h-[121px]"
               >
                 <p
-                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base xl:text-lg w-[240px]"
                 >
                   Jumpstart your boxing journey with our foundational course.
                 </p>
-                <a href="#" class="font-bold text-sm underline">View Package</a>
+                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                  >View Package</a
+                >
               </div>
             </div>
           </div>
           <!-- Second Item in flex column -->
           <div
-            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+            class="flex flex-col justify-center items-center w-[336px] h-[410px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px] xl:w-[368px] xl:h-[388px]"
           >
             <div
               class="font-syne w-[208px] flex flex-col justify-between items-center h-[282px] lg:h-[260px]"
             >
               <p class="font-extrabold text-center">Fighter's Programme</p>
-              <p class="text-lg font-semibold py-8">
-                <span class="text-[56px] font-bold lg:text-5xl">$49</span>/month
+              <p class="text-lg font-semibold py-8 xl:py-5">
+                <span class="text-[56px] font-bold lg:text-5xl xl:text-[56px]"
+                  >$49</span
+                >/month
               </p>
               <div
-                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px]"
+                class="flex flex-col justify-between h-[121px] items-center lg:h-[99px] xl:h-[121px]"
               >
                 <p
-                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base xl:text-lg w-[240px]"
                 >
                   For those ready to take their skills to the competition level.
                 </p>
-                <a href="#" class="font-bold text-sm underline">View Package</a>
+                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                  >View Package</a
+                >
               </div>
             </div>
           </div>
           <!-- Third Item in flex column -->
           <div
-            class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px]"
+            class="flex flex-col justify-center items-center w-[336px] h-[388px] bg-warriorDarkBlueBg rounded-lg mb-4 lg:h-[338px] lg:w-[261px] xl:w-[368px] xl:h-[388px]"
           >
             <div
               class="font-syne w-[208px] flex flex-col justify-between items-center h-[260px]"
             >
               <p class="font-extrabold text-center">Personal Training</p>
-              <p class="text-lg font-semibold py-8">
-                <span class="text-[56px] font-bold lg:text-5xl">$99</span>/month
+              <p class="text-lg font-semibold py-8 xl:py-5">
+                <span class="text-[56px] font-bold lg:text-5xl xl:text-[56px]"
+                  >$99</span
+                >/month
               </p>
-              <div class="flex flex-col justify-between h-[99px] items-center">
+              <div
+                class="flex flex-col justify-between items-center h-[99px] xl:h-[121px]"
+              >
                 <p
-                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base"
+                  class="text-center text-lg font-normal leading-[21.6px] lg:text-base xl:text-lg w-[240px]"
                 >
                   One-on-one sessions tailored to your goals.
                 </p>
-                <a href="#" class="font-bold text-sm underline">View Package</a>
+                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                  >View Package</a
+                >
               </div>
             </div>
           </div>
@@ -522,21 +550,22 @@
       id="about"
     >
       <div
-        class="lg:w-[816px] flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:py-[120px]"
+        class="lg:w-[816px] flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center lg:py-[120px] xl:w-[1136px]"
       >
         <img
           class="pt-[104px] pb-16 lg:hidden"
           src="./resources/mobile-about-us.png"
           alt="Warriors boxing group standing together"
         />
+
         <!-- Container for text -->
         <div class="w-[336px]">
           <p
-            class="font-extrabold text-2xl text-center lg:text-start lg:text-[28px]"
+            class="font-extrabold text-2xl text-center lg:text-start lg:text-[28px] xl:text-[32px]"
           >
             About Us
           </p>
-          <p class="py-6 text-center lg:text-start">
+          <p class="py-6 text-center lg:text-start xl:w-[527px]">
             Founded by former professional boxers, Warriors Boxing Club is more
             than just a gym. It's a place where you can challenge yourself,
             learn the noble art of boxing, and be part of an inspiring
@@ -549,26 +578,32 @@
             Read more
           </p>
         </div>
-        <img
-          class="hidden lg:block"
-          src="./resources/tablet-about-us.png"
-          alt="Warriors boxing group standing together"
-        />
+        <div
+          class="lg:flex lg:justify-center lg:items-center lg:border lg:w-[364px] lg:h-[329px] lg:rounded-[4px] lg:overflow-hidden xl:w-[528px]"
+        >
+          <img
+            class="hidden lg:relative lg:block right-0 max-w-[528px] lg:h-[329px]"
+            src="./resources/desktop-about-us.png"
+            alt="Warriors boxing group standing together"
+          />
+        </div>
       </div>
     </div>
     <!-- We Hope to see you... Section -->
     <div class="flex flex-col justify-center items-center bg-[#EFF3F8]">
       <p
-        class="w-[336px] font-syne font-extrabold text-[40px] text-center py-[104px] leading-10 lg:w-[816px] lg:text-[32px]"
+        class="w-[336px] font-syne font-extrabold text-[40px] text-center py-[104px] leading-10 lg:w-[816px] lg:text-[32px] xl:text-[40px] xl:w-[1136px]"
       >
         We Hope to See You Become a Warrior Soon!
       </p>
     </div>
     <!-- Footer section -->
     <footer
-      class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px]"
+      class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px] xl:flex-row"
     >
-      <div class="w-[336px] font-syne text-white lg:w-[816px]">
+      <div
+        class="w-[336px] font-syne text-white lg:w-[816px] lg:flex lg:flex-col xl:flex-row xl:w-[1136px]"
+      >
         <!-- Flex 1 for Tablet View Port -->
         <div class="lg:flex lg:flex-row lg:mb-16">
           <div class="lg:w-[272px] lg:mr-14">
@@ -583,7 +618,7 @@
             </p>
           </div>
 
-          <div class="">
+          <div class="xl:pr-[10px]">
             <p class="font-extrabold mb-3">Socials</p>
             <p class="mb-[56px]">
               Facebook: @warriorsboxclub
@@ -594,9 +629,9 @@
         </div>
         <!-- Flex 2 for Tablet View Port -->
         <div class="lg:flex lg:flex-row">
-          <div class="lg:w-[272px] lg:mr-14">
+          <div class="lg:w-[272px] lg:mr-14 xl:pl-[47px]">
             <p class="font-extrabold mb-3">Location</p>
-            <p class="mb-[56px]">
+            <p class="mb-[56px] xl:w-[262px]">
               Location: Warriors Boxing Club,<br />5 PaddingtonRd, Bath,
               Somerset, BA54RD
             </p>
@@ -614,14 +649,14 @@
     <!-- Feel free to reach out... -->
     <hr />
     <div
-      class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')]"
+      class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')] xl:lg:bg-[url('resources/desktop-footer-vector.svg')]"
     >
       <p
-        class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start"
+        class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start xl:text-center"
       >
         Feel free to reach out to us for any inquiries or training sessions!
       </p>
-      <p class="lg:text-start lg:w-[816px]">
+      <p class="lg:text-start lg:w-[816px] xl:text-center">
         Privacy Policy & Terms of Service
       </p>
     </div>
