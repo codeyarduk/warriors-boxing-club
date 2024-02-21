@@ -6,8 +6,116 @@
     <meta name="viewport" content="width=§, initial-scale=1.0">
     <title>Staff</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 </head>
-<body>
-    <h1>hi</h1>
+<body id="">
+    <!-- Header -->
+    <header
+    id="header"
+    class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
+  >
+    <div
+      class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+    >
+      <div>
+        <a href="#top"
+          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+        /></a>
+        <a
+          id="header-text"
+          class="text-white font-syne font-extrabold text-lg ml-[34px] lg:hidden"
+          href="#top"
+        >
+          ARRIORS
+        </a>
+        <a
+          id="header-text-desktop"
+          class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+          href="#top"
+        >
+          ARRIORS BOXING CLUB
+        </a>
+      </div>
+      <div
+        id="header-links"
+        class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
+      >
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="/staff">Staff</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#membership">Membership</a>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <!-- DROP DOWN MENU  -->
+      <div id="navbtn" class="z-10 relative w-8 h-4">
+        <img
+          id="white-burger"
+          src="resources/icons/burger-right.png"
+          class="cursor-pointer absolute xl:hidden"
+          loading="lazy"
+          alt="knockout boxing logo"
+        />
+        <img
+          id="black-burger"
+          src="resources/icons/burger-right-dark-blue.png"
+          class="cursor-pointer opacity-0 absolute xl:hidden"
+        />
+        <img
+          id="open-burger"
+          src="resources/icons/open-burger.svg"
+          class="cursor-pointer opacity-0 absolute xl:hidden"
+        />
+      </div>
+      <div
+        class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
+        id="dropdown"
+      >
+        <div
+          class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+        >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="/staff"
+            >Staff</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="#facilities"
+            >Facilities</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
+            href="#membership"
+            >Membership</a
+          >
+        </div>
+      </div>
+    </div>
+    </header>
+    <!-- Hero -->
+    <div class="bg-[url('./resources/staff/mobile-hero-image.png')] h-[417px] bg-no-repeat bg-center bg-cover flex justify-center items-center">
+        <p class="font-syne font-extrabold text-[32px] text-white text-center">Staff</p>
+    </div>
+    <div class="change-white h-[608px] bg-[#EFF3F8] flex justify-center items-center flex-col font-syne">
+        <p class="w-[336px] text-center font-extrabold text-2xl leading-[22px]">Meet Our Coaches</p>
+        <p class="w-[336px] text-center text-[18px] leading-[21.6px] pt-4">At Warriors Boxing Club, our coaching team is a dynamic blend of passion, expertise, and diverse cultural backgrounds, each bringing their own unique flavor to the art of boxing. These remarkable coaches are not just trainers; they are mentors who inspire, challenge, and empower our members to reach their full potential. From technical finesse to mental fortitude, they guide you through every aspect of boxing with dedication and skill. Get to know the exceptional individuals ready to support your journey at Warriors Boxing Club.</p>
+    </div>
+
+    <script src="main.js"></script>
+
 </body>
 </html>

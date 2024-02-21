@@ -9,7 +9,6 @@
 
 // Header dropdown animation
 var tl = gsap.timeline({ paused: true });
-
 // Logic for applying animation
 function openNav() {
   animateOpenNav();
