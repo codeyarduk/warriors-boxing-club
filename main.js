@@ -27,6 +27,7 @@ function openNav() {
 }
 
 // The animation
+
 function animateOpenNav() {
   var mobileNav = document.getElementById("dropdown");
   var whiteBurger = document.getElementById("white-burger");
@@ -65,7 +66,7 @@ function animateOpenNav() {
   tl.to(
     [headerText, headerTextDesk],
     {
-      color: "black",
+      color: "#0B1F3B",
     },
     "<",
   );
@@ -78,7 +79,7 @@ function animateOpenNav() {
       delay: 0.2,
       stagger: {
         // wrap advanced options in an object
-        each: 0.1,
+        each: 0.07,
         ease: "power1.in",
       },
     },
@@ -115,7 +116,7 @@ scrollWhite.to([headerText, headerTextDesk, headerLink], {
     end: "top 74px",
     scrub: true,
   },
-  color: "black",
+  color: "#0B1F3B",
 });
 scrollWhite.to(whiteBurger, {
   scrollTrigger: {
