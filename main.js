@@ -152,7 +152,7 @@ setTextDarkBlue.to([headerText, headerTextDesk],
 setTextDarkBlue.to(whiteBurger, 
   {
     opacity: 0,
-    delay: 1
+
   },
   "<",
   );
@@ -160,7 +160,7 @@ setTextDarkBlue.to(whiteBurger,
 setTextDarkBlue.to(blackBurger, 
   {
     opacity: 1,
-    delay: 1
+
   },
   "<",
   );
