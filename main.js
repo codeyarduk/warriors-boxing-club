@@ -22,6 +22,7 @@ function openNav() {
   link.forEach((link) => {
     link.addEventListener("click", () => {
       tl.reversed(!tl.reversed());
+      setTextDarkBlue.play();
     });
   });
 }
@@ -137,3 +138,30 @@ scrollWhite.to(blackBurger, {
   },
   opacity: 1,
 });
+// Added animation for when menu is clicked at the top of the screen
+var setTextDarkBlue = gsap.timeline({ paused: true });
+
+setTextDarkBlue.to([headerText, headerTextDesk], 
+  {
+    color: "#0B1F3B",
+    delay: 1
+  },
+  "<",
+  );
+
+setTextDarkBlue.to(whiteBurger, 
+  {
+    opacity: 0,
+    delay: 1
+  },
+  "<",
+  );
+
+setTextDarkBlue.to(blackBurger, 
+  {
+    opacity: 1,
+    delay: 1
+  },
+  "<",
+  );
+
