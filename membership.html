@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </head>
+  <body id="top">
+    <!-- HEADER -->
+    <header
+      id="header"
+      class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
+    >
+      <div
+        class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+      >
+        <div>
+          <a href="#top"
+            ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+          /></a>
+          <a
+            id="header-text"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] lg:hidden"
+            href="#top"
+          >
+            ARRIORS
+          </a>
+          <a
+            id="header-text-desktop"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+            href="#top"
+          >
+            ARRIORS BOXING CLUB
+          </a>
+        </div>
+        <div
+          id="header-links"
+          class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
+        >
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="/staff">Staff</a>
+          <a href="#facilities">Facilities</a>
+          <a href="#membership">Membership</a>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <!-- DROP DOWN MENU  -->
+        <div id="navbtn" class="z-10 relative w-8 h-4">
+          <img
+            id="white-burger"
+            src="resources/icons/burger-right.png"
+            class="cursor-pointer absolute xl:hidden"
+            loading="lazy"
+            alt="knockout boxing logo"
+          />
+          <img
+            id="black-burger"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+        </div>
+        <div
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
+          id="dropdown"
+        >
+          <div
+            class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+          >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
+              href="/"
+              >Home</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="#about"
+              >About</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/staff"
+              >Staff</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="#facilities"
+              >Facilities</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
+              href="#membership"
+              >Membership</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HERO SECTION -->
+    <div
+      class="flex flex-col items-center text-center bg-left bg-auto bg-no-repeat h-[525px] bg-[url('/resources/membership-hero.png')] lg:bg-[url('/resources/tablet-membership-hero.png')] xl:h-[548px] xl:bg-[url('/resources/desktop-membership-hero.png')]"
+    >
+      <p
+        class="pt-52 font-syne font-extrabold text-[28px] text-white lg:text-[48px] xl:text-[64px] xl:pt-60"
+      >
+        Memberships
+      </p>
+      <p
+        class="pt-2 font-syne font-light leading-5 tracking-[0.05em] text-white max-w-[555px] px-5 lg:max-w-[900px] xl:hidden"
+      >
+        Welcome to the Membership Page of Warriors Boxing Club, where we offer a
+        variety of tailored packages designed to meet your boxing and fitness
+        needs, no matter where you are on your journey.
+      </p>
+    </div>
+    <!-- WELCOME SECTION -->
+    <div class="w-auto flex items-center justify-center bg-[#EFF3F8]">
+      <p
+        class="hidden font-syne font-medium leading-5 text-center mx-8 py-24 max-w-[1072px] text-lg xl:block"
+      >
+        <span class="font-bold">Welcome</span> to the Membership Page of
+        Warriors Boxing Club, where we offer a variety of tailored packages
+        designed to meet your boxing and fitness needs, no matter where you are
+        on your journey. From beginners to seasoned fighters, our comprehensive
+        programs are crafted to
+        <span class="font-bold">help you achieve your goals,</span> whether
+        that's to get in shape, learn the art of boxing, or compete at the
+        highest level. Dive into the details of each package and
+        <span class="font-bold">find the one that's right for you.</span>
+      </p>
+    </div>
+    <!-- PROGRAMS SECTION -->
+    <div class="flex flex-col xl:flex-row xl:justify-center">
+      <!-- BEGINNERS -->
+      <div class="w-full flex justify-center">
+        <div
+          class="flex flex-col items-start text-left px-8 font-syne leading-5 max-w-[880px] lg:text-lg xl:text-base xl:max-w-[612px]"
+        >
+          <p class="font-bold pt-16">
+            <span class="text-4xl lg:text-5xl xl:text-[56px]">$29</span>/ m
+          </p>
+          <p class="font-extrabold pt-7">Beginners Bootcamp</p>
+          <p class="font-medium pt-2">
+            Our Beginner's Bootcamp is the perfect starting point for those new
+            to boxing. This foundational course covers all the basics, from
+            stance and footwork to punches and defense. Over the course of
+            several weeks, you'll build a solid foundation in the sport, improve
+            your fitness levels, and gain confidence in your abilities. The
+            Bootcamp includes:
+          </p>
+          <div class="flex flex-col pt-5 font-medium">
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">Group sessions focused on boxing fundamentals</p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Introduction to boxing equipment and how to use it safely
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Basic fitness & conditioning exercises to build strength &
+                endurance
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                A supportive, welcoming environment ideal for beginners
+              </p>
+            </div>
+            <button
+              class="bg-[#DC006F] text-white font-syne self-center py-3 max-w-[336px] font-bold text-[14px] w-full mt-10 rounded-lg mb-16 xl:max-w-[612px]"
+            >
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- BEGINNERS -->
+      <div class="bg-[#EFF3F8] xl:bg-white w-full flex justify-center">
+        <div
+          class="flex flex-col items-start text-left px-8 font-syne leading-5 max-w-[880px] lg:text-lg xl:text-base xl:max-w-[612px]"
+        >
+          <p class="font-bold pt-16">
+            <span class="text-4xl lg:text-5xl xl:text-[56px]">$29</span>/ m
+          </p>
+          <p class="font-extrabold pt-7">Beginners Bootcamp</p>
+          <p class="font-medium pt-2">
+            Our Beginner's Bootcamp is the perfect starting point for those new
+            to boxing. This foundational course covers all the basics, from
+            stance and footwork to punches and defense. Over the course of
+            several weeks, you'll build a solid foundation in the sport, improve
+            your fitness levels, and gain confidence in your abilities. The
+            Bootcamp includes:
+          </p>
+          <div class="flex flex-col pt-5 font-medium">
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">Group sessions focused on boxing fundamentals</p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Introduction to boxing equipment and how to use it safely
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Basic fitness & conditioning exercises to build strength &
+                endurance
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                A supportive, welcoming environment ideal for beginners
+              </p>
+            </div>
+            <button
+              class="bg-[#DC006F] text-white font-syne self-center py-3 max-w-[336px] font-bold text-[14px] w-full mt-10 rounded-lg mb-16 xl:max-w-[612px]"
+            >
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col xl:flex-row xl:justify-center">
+      <!-- BEGINNERS -->
+      <div class="w-full flex justify-center">
+        <div
+          class="flex flex-col items-start text-left px-8 font-syne leading-5 max-w-[880px] lg:text-lg xl:text-base xl:max-w-[612px]"
+        >
+          <p class="font-bold pt-16">
+            <span class="text-4xl lg:text-5xl xl:text-[56px]">$29</span>/ m
+          </p>
+          <p class="font-extrabold pt-7">Beginners Bootcamp</p>
+          <p class="font-medium pt-2">
+            Our Beginner's Bootcamp is the perfect starting point for those new
+            to boxing. This foundational course covers all the basics, from
+            stance and footwork to punches and defense. Over the course of
+            several weeks, you'll build a solid foundation in the sport, improve
+            your fitness levels, and gain confidence in your abilities. The
+            Bootcamp includes:
+          </p>
+          <div class="flex flex-col pt-5 font-medium">
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">Group sessions focused on boxing fundamentals</p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Introduction to boxing equipment and how to use it safely
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Basic fitness & conditioning exercises to build strength &
+                endurance
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                A supportive, welcoming environment ideal for beginners
+              </p>
+            </div>
+            <button
+              class="bg-[#DC006F] text-white font-syne self-center py-3 max-w-[336px] font-bold text-[14px] w-full mt-10 rounded-lg mb-16 xl:max-w-[612px]"
+            >
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- BEGINNERS -->
+      <div class="bg-[#EFF3F8] xl:bg-white w-full flex justify-center">
+        <div
+          class="flex flex-col items-start text-left px-8 font-syne leading-5 max-w-[880px] lg:text-lg xl:text-base xl:max-w-[612px]"
+        >
+          <p class="font-bold pt-16">
+            <span class="text-4xl lg:text-5xl xl:text-[56px]">$29</span>/ m
+          </p>
+          <p class="font-extrabold pt-7">Beginners Bootcamp</p>
+          <p class="font-medium pt-2">
+            Our Beginner's Bootcamp is the perfect starting point for those new
+            to boxing. This foundational course covers all the basics, from
+            stance and footwork to punches and defense. Over the course of
+            several weeks, you'll build a solid foundation in the sport, improve
+            your fitness levels, and gain confidence in your abilities. The
+            Bootcamp includes:
+          </p>
+          <div class="flex flex-col pt-5 font-medium">
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">Group sessions focused on boxing fundamentals</p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Introduction to boxing equipment and how to use it safely
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                Basic fitness & conditioning exercises to build strength &
+                endurance
+              </p>
+            </div>
+            <div class="flex flex-row pt-2">
+              <img src="resources\icons\checkmark.svg" alt="Green checkmark" />
+              <p class="pl-4">
+                A supportive, welcoming environment ideal for beginners
+              </p>
+            </div>
+            <button
+              class="bg-[#DC006F] text-white font-syne self-center py-3 max-w-[336px] font-bold text-[14px] w-full mt-10 rounded-lg mb-16 xl:max-w-[612px]"
+            >
+              Enquire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer section -->
+    <div class="w-auto flex items-center justify-center xl:bg-[#EFF3F8]">
+      <p
+        class="font-medium font-syne leading-5 text-center py-16 mx-8 max-w-[636px] lg:py-24 lg:max-w-[816px] xl:max-w-[1072px]"
+      >
+        Each of our membership packages is designed to offer something unique,
+        catering to different interests, goals, and skill levels. At Warriors
+        Boxing Club, we're committed to providing a supportive, challenging, and
+        empowering environment for all our members. Ready to take the next step?
+        Visit our Packages Page to sign up or learn more about what each
+        membership has to offer. Join the Warriors Boxing Club family today and
+        start your journey to becoming the best version of yourself, both in and
+        out of the ring.
+      </p>
+    </div>
+    <!-- Footer section -->
+    <footer
+      class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px] xl:flex-row"
+    >
+      <div
+        class="w-[336px] font-syne text-white lg:w-[816px] lg:flex lg:flex-col xl:flex-row xl:w-[1136px]"
+      >
+        <!-- Flex 1 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row lg:mb-16">
+          <div class="lg:w-[272px] lg:mr-14">
+            <p class="font-extrabold mb-3">Opening Time</p>
+            <p class="mb-3">
+              Monday - Friday: 9:00 AM - 9:00 PM
+              <br />Saturday: 10:00 AM - 6:00 PM <br />Sunday: Closed
+            </p>
+            <p class="mb-[56px] lg:mb-0 lg:w-[272px]">
+              Please note that these hours are subject to change for special
+              events or holidays.
+            </p>
+          </div>
+
+          <div class="xl:pr-[10px]">
+            <p class="font-extrabold mb-3">Socials</p>
+            <p class="mb-[56px]">
+              Facebook: @warriorsboxclub
+              <br />Instagram: @warriorsboxclub <br />Twitter: @warriorsboxing
+              <br />YouTube: Warriors Box Club
+            </p>
+          </div>
+        </div>
+        <!-- Flex 2 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row">
+          <div class="lg:w-[272px] lg:mr-14 xl:pl-[47px]">
+            <p class="font-extrabold mb-3">Location</p>
+            <p class="mb-[56px] xl:w-[262px]">
+              Location: Warriors Boxing Club,<br />5 PaddingtonRd, Bath,
+              Somerset, BA54RD
+            </p>
+          </div>
+
+          <div>
+            <p class="font-extrabold mb-3">Contact</p>
+            <p>
+              Email: info@warriorsboxclub.com <br />Phone: +27(555) 4123-4567
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Feel free to reach out... -->
+    <hr />
+    <div
+      class="bg-[url('resources/mobile-footer-vector.png')] bg-no-repeat bg-center h-[215px] bg-warriorBlueBg text-white flex flex-col justify-center items-center font-syne lg:bg-[url('resources/tablet-footer-vector.png')] xl:lg:bg-[url('resources/desktop-footer-vector.svg')]"
+    >
+      <p
+        class="w-[336px] text-center text-lg font-bold pb-5 lg:w-[816px] lg:text-start xl:text-center"
+      >
+        Feel free to reach out to us for any inquiries or training sessions!
+      </p>
+      <p class="lg:text-start lg:w-[816px] xl:text-center">
+        Privacy Policy & Terms of Service
+      </p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
