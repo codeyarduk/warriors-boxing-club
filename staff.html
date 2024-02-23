@@ -1,169 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=§, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=§, initial-scale=1.0" />
     <title>Staff</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-</head>
-<body id="">
+  </head>
+  <body id="">
     <!-- Header -->
     <header
-    id="header"
-    class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
-  >
-    <div
-      class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+      id="header"
+      class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
     >
-      <div>
-        <a href="#top"
-          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
-        /></a>
-        <a
-          id="header-text"
-          class="text-white font-syne font-extrabold text-lg ml-[34px] block lg:hidden"
-          href="#top"
-        >
-          ARRIORS
-        </a>
-        <a
-          id="header-text-desktop"
-          class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
-          href="#top"
-        >
-          ARRIORS BOXING CLUB
-        </a>
-      </div>
       <div
-        id="header-links"
-        class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
+        class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
       >
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/staff">Staff</a>
-        <a href="/#facilities">Facilities</a>
-        <a href="/#membership">Membership</a>
-      </div>
-    </div>
-    <div class="flex items-center">
-      <!-- DROP DOWN MENU  -->
-      <div id="navbtn" class="z-10 relative w-8 h-4">
-        <img
-          id="white-burger"
-          src="resources/icons/burger-right.png"
-          class="cursor-pointer absolute xl:hidden"
-          loading="lazy"
-          alt="knockout boxing logo"
-        />
-        <img
-          id="black-burger"
-          src="resources/icons/burger-right-dark-blue.png"
-          class="cursor-pointer opacity-0 absolute xl:hidden"
-        />
-        <img
-          id="open-burger"
-          src="resources/icons/open-burger.svg"
-          class="cursor-pointer opacity-0 absolute xl:hidden"
-        />
-      </div>
-      <div
-        class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
-        id="dropdown"
-      >
+        <div>
+          <a href="#top"
+            ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+          /></a>
+          <a
+            id="header-text"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] block lg:hidden"
+            href="#top"
+          >
+            ARRIORS
+          </a>
+          <a
+            id="header-text-desktop"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+            href="#top"
+          >
+            ARRIORS BOXING CLUB
+          </a>
+        </div>
         <div
-          class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+          id="header-links"
+          class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
         >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
-            href="/"
-            >Home</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="/#about"
-            >About</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="/staff"
-            >Staff</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="/#facilities"
-            >Facilities</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
-            href="/#membership"
-            >Membership</a
-          >
+          <a href="/">Home</a>
+          <a href="/#about">About</a>
+          <a href="/staff">Staff</a>
+          <a href="/#facilities">Facilities</a>
+          <a href="/#membership">Membership</a>
         </div>
       </div>
-    </div>
+      <div class="flex items-center">
+        <!-- DROP DOWN MENU  -->
+        <div id="navbtn" class="z-10 relative w-8 h-4">
+          <img
+            id="white-burger"
+            src="resources/icons/burger-right.png"
+            class="cursor-pointer absolute xl:hidden"
+            loading="lazy"
+            alt="knockout boxing logo"
+          />
+          <img
+            id="black-burger"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+        </div>
+        <div
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
+          id="dropdown"
+        >
+          <div
+            class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+          >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
+              href="/"
+              >Home</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/#about"
+              >About</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/staff"
+              >Staff</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/#facilities"
+              >Facilities</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
+              href="/#membership"
+              >Membership</a
+            >
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Hero -->
-    <div class="bg-[url('./resources/staff/desktop-hero.png')] h-[417px] bg-no-repeat bg-center bg-cover flex justify-center items-center lg:h-[474px] lg:bg-left-top lg:bg-[length:1440px] xl:h-[548px] xl:bg-left-top xl:bg-[length:2080px_1396px] xl:bg-repeat">
-        <p class="change-white font-syne font-extrabold text-[32px] text-white text-center lg:text-5xl xl:text-[64px]">Staff</p>
+    <div
+      class="bg-[url('./resources/staff/desktop-hero.png')] h-[417px] bg-no-repeat bg-center bg-cover flex justify-center items-center lg:h-[474px] lg:bg-left-top lg:bg-[length:1440px] xl:h-[548px] xl:bg-left-top xl:bg-[length:2080px_1396px] xl:bg-repeat"
+    >
+      <p
+        class="change-white font-syne font-extrabold text-[32px] text-white text-center lg:text-5xl xl:text-[64px]"
+      >
+        Staff
+      </p>
     </div>
     <!-- Meet Our Coaches -->
-    <div class=" h-[608px] bg-[#EFF3F8] flex justify-center items-center flex-col font-syne lg:h-[418px]">
-        <p class="w-[336px] text-center font-extrabold text-2xl leading-[22px] lg:w-[752px]">Meet Our Coaches</p>
-        <p class="w-[336px] text-center text-[18px] leading-[21.6px] pt-4 lg:w-[752px]">At Warriors Boxing Club, our coaching team is a dynamic blend of passion, expertise, and diverse cultural backgrounds, each bringing their own unique flavor to the art of boxing. These remarkable coaches are not just trainers; they are mentors who inspire, challenge, and empower our members to reach their full potential. From technical finesse to mental fortitude, they guide you through every aspect of boxing with dedication and skill. Get to know the exceptional individuals ready to support your journey at Warriors Boxing Club.</p>
+    <div
+      class="h-[608px] bg-[#EFF3F8] flex justify-center items-center flex-col font-syne lg:h-[418px]"
+    >
+      <p
+        class="w-[336px] text-center font-extrabold text-2xl leading-[22px] lg:w-[752px]"
+      >
+        Meet Our Coaches
+      </p>
+      <p
+        class="w-[336px] text-center text-[18px] leading-[21.6px] pt-4 lg:w-[752px]"
+      >
+        At Warriors Boxing Club, our coaching team is a dynamic blend of
+        passion, expertise, and diverse cultural backgrounds, each bringing
+        their own unique flavor to the art of boxing. These remarkable coaches
+        are not just trainers; they are mentors who inspire, challenge, and
+        empower our members to reach their full potential. From technical
+        finesse to mental fortitude, they guide you through every aspect of
+        boxing with dedication and skill. Get to know the exceptional
+        individuals ready to support your journey at Warriors Boxing Club.
+      </p>
     </div>
     <!-- List of coaches -->
-    <div class="flex justify-center items-center flex-row flex-wrap ">
-      <div class="w-[336px] flex justify-between  flex-row flex-wrap lg:w-[816px] xl:w-[1072px] lg:py-[80px] xl:py-[104px]">
+    <div class="flex justify-center items-center flex-row flex-wrap">
+      <div
+        class="w-[336px] flex justify-between flex-row flex-wrap lg:w-[816px] xl:w-[1072px] lg:py-[80px] xl:py-[104px]"
+      >
         <!-- Coach Antonio -->
-        <div class="flex flex-col justify-center items-start w-[336px] font-syne mt-36 mb-16 lg:mt-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/antonio.png" alt="man wearing orange beanie looking to his left" class="mb-10">
+        <div
+          class="flex flex-col justify-center items-start w-[336px] font-syne mt-36 mb-16 lg:mt-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/antonio.png"
+            alt="man wearing orange beanie looking to his left"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Antonio</p>
-          <p class="leading-[19.2px]">Antonio combines his boxing prowess with his strength and conditioning expertise to offer a comprehensive training approach. His sessions are designed to enhance overall athleticism, focusing on strength, agility, and endurance. Antonio's philosophy centers on the symbiosis of a strong body and mind, preparing you for any challenge, in or out of the ring.</p>
+          <p class="leading-[19.2px]">
+            Antonio combines his boxing prowess with his strength and
+            conditioning expertise to offer a comprehensive training approach.
+            His sessions are designed to enhance overall athleticism, focusing
+            on strength, agility, and endurance. Antonio's philosophy centers on
+            the symbiosis of a strong body and mind, preparing you for any
+            challenge, in or out of the ring.
+          </p>
         </div>
         <!-- Coach Jasper -->
-        <div class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/jasper.png" alt="man wearing red bandana forward" class="mb-10">
+        <div
+          class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/jasper.png"
+            alt="man wearing red bandana forward"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Jasper</p>
-          <p class="leading-[19.2px]">Jasper is known for his intense, high-energy training sessions that epitomize his "train hard, fight easy" philosophy. A former pro boxer, Jasper challenges you to push beyond your perceived limits, fostering an environment where grit and determination thrive.</p>
+          <p class="leading-[19.2px]">
+            Jasper is known for his intense, high-energy training sessions that
+            epitomize his "train hard, fight easy" philosophy. A former pro
+            boxer, Jasper challenges you to push beyond your perceived limits,
+            fostering an environment where grit and determination thrive.
+          </p>
         </div>
         <!-- Coach Caleb -->
-        <div class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/caleb.png" alt="man with boxing gloves looking forward" class="mb-10">
+        <div
+          class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/caleb.png"
+            alt="man with boxing gloves looking forward"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Caleb</p>
-          <p class="leading-[19.2px]">Caleb's expertise in sports psychology gives him a unique edge in coaching. He excels at helping members overcome psychological barriers, building a resilient mindset that transcends the boxing ring. His empathetic and supportive style is especially encouraging for newcomers and those seeking to build confidence through boxing.</p>
+          <p class="leading-[19.2px]">
+            Caleb's expertise in sports psychology gives him a unique edge in
+            coaching. He excels at helping members overcome psychological
+            barriers, building a resilient mindset that transcends the boxing
+            ring. His empathetic and supportive style is especially encouraging
+            for newcomers and those seeking to build confidence through boxing.
+          </p>
         </div>
         <!-- Coach Yao -->
-        <div class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/yao.png" alt="man with dark hair looking to the side" class="mb-10">
+        <div
+          class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/yao.png"
+            alt="man with dark hair looking to the side"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Yao</p>
-          <p class="leading-[19.2px]">Originally from Thailand, Yao brings the rich boxing tradition of his homeland to Warriors Boxing Club. His style is infused with the fluidity and grace characteristic of Thai boxing, emphasizing agility and rhythmic movement. Yao's energetic and vibrant coaching approach makes each session not just a workout, but a celebration of movement and strength.</p>
+          <p class="leading-[19.2px]">
+            Originally from Thailand, Yao brings the rich boxing tradition of
+            his homeland to Warriors Boxing Club. His style is infused with the
+            fluidity and grace characteristic of Thai boxing, emphasizing
+            agility and rhythmic movement. Yao's energetic and vibrant coaching
+            approach makes each session not just a workout, but a celebration of
+            movement and strength.
+          </p>
         </div>
         <!-- Coach Matias -->
-        <div class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/matias.png" alt="man with short hair looking forward" class="mb-10">
+        <div
+          class="flex flex-col justify-start items-start w-[336px] font-syne my-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/matias.png"
+            alt="man with short hair looking forward"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Matias</p>
-          <p class="leading-[19.2px]">Matias is a former national champion whose love for boxing is matched only by his commitment to teaching. He emphasizes a strategic approach, focusing on outsmarting opponents with clever tactics and superior ring intelligence. His training sessions are a mix of physical rigor and mental chess, pushing you to your limits while sharpening your strategic thinking.</p>
+          <p class="leading-[19.2px]">
+            Matias is a former national champion whose love for boxing is
+            matched only by his commitment to teaching. He emphasizes a
+            strategic approach, focusing on outsmarting opponents with clever
+            tactics and superior ring intelligence. His training sessions are a
+            mix of physical rigor and mental chess, pushing you to your limits
+            while sharpening your strategic thinking.
+          </p>
         </div>
         <!-- Coach Mike -->
-        <div class="flex flex-col justify-start items-start w-[336px] font-syne mt-16 mb-36 lg:mb-16 lg:w-[364px] xl:w-[304px]">
-          <img src="./resources/staff/mobile-staff-icons/mike.png" alt="man holding a boxing bag for someone to punch" class="mb-10">
+        <div
+          class="flex flex-col justify-start items-start w-[336px] font-syne mt-16 mb-36 lg:mb-16 lg:w-[364px] xl:w-[304px]"
+        >
+          <img
+            src="./resources/staff/mobile-staff-icons/mike.png"
+            alt="man holding a boxing bag for someone to punch"
+            class="mb-10"
+          />
           <p class="font-bold text-2xl leading-[22px] mb-4">Mike</p>
-          <p class="leading-[19.2px]">Matias is a former national champion whose love for boxing is matched only by his commitment to teaching. He emphasizes a strategic approach, focusing on outsmarting opponents with clever tactics and superior ring intelligence. His training sessions are a mix of physical rigor and mental chess, pushing you to your limits while sharpening your strategic thinking.</p>
+          <p class="leading-[19.2px]">
+            Matias is a former national champion whose love for boxing is
+            matched only by his commitment to teaching. He emphasizes a
+            strategic approach, focusing on outsmarting opponents with clever
+            tactics and superior ring intelligence. His training sessions are a
+            mix of physical rigor and mental chess, pushing you to your limits
+            while sharpening your strategic thinking.
+          </p>
         </div>
       </div>
     </div>
     <!-- Team Values -->
     <div class="bg-[#EFF3F8] flex justify-center items-center">
-      <div class="flex flex-col justify-center items-center font-syne lg:justify-between lg:flex-row-reverse lg:w-[816px] lg:my-20 xl:w-[1136px]">
-        <div class="h-48 w-48 mt-[120px] mb-16 rounded-full lg:w-[364px] lg:h-[476px] lg:rounded-lg overflow-hidden lg:mt-0 lg:mb-0 border xl:w-[479px] xl:h-[438px]">
-          <img src="./resources/staff/team-values.png" class="w-full h-full object-cover" >
+      <div
+        class="flex flex-col justify-center items-center font-syne lg:justify-between lg:flex-row-reverse lg:w-[816px] lg:my-20 xl:w-[1136px]"
+      >
+        <div
+          class="h-48 w-48 mt-[120px] mb-16 rounded-full lg:w-[364px] lg:h-[476px] lg:rounded-lg overflow-hidden lg:mt-0 lg:mb-0 border xl:w-[479px] xl:h-[438px]"
+        >
+          <img
+            src="./resources/staff/team-values.png"
+            class="w-full h-full object-cover"
+          />
         </div>
         <div class="flex flex-col items-center lg:items-start">
-          <p class="font-extrabold text-2xl leading-[22px] text-center mb-6 lg:text-start xl:text-[32px]">Team values</p>
-          <p class="w-[336px] text-base leading-[19.2px] text-center lg:text-start lg:w-[377px] xl:w-[528px] xl:text-lg xl:leading-[21.6px]">With such a diverse and skilled team, Warriors Boxing Club is more than just a gym; it's a community where champions are forged. Whether you're drawn to the strategic depth of Matias, the rhythmic energy of Yao, the psychological insights of Caleb, the intensity of Jasper, the precision of Mike, or the holistic approach of Antonio, you'll find your place and your path to greatness here. Join us and let our coaches lead you on a transformative journey of empowerment, skill-building, and self-discovery</p>
+          <p
+            class="font-extrabold text-2xl leading-[22px] text-center mb-6 lg:text-start xl:text-[32px]"
+          >
+            Team values
+          </p>
+          <p
+            class="w-[336px] text-base leading-[19.2px] text-center lg:text-start lg:w-[377px] xl:w-[528px] xl:text-lg xl:leading-[21.6px]"
+          >
+            With such a diverse and skilled team, Warriors Boxing Club is more
+            than just a gym; it's a community where champions are forged.
+            Whether you're drawn to the strategic depth of Matias, the rhythmic
+            energy of Yao, the psychological insights of Caleb, the intensity of
+            Jasper, the precision of Mike, or the holistic approach of Antonio,
+            you'll find your place and your path to greatness here. Join us and
+            let our coaches lead you on a transformative journey of empowerment,
+            skill-building, and self-discovery
+          </p>
           <button
             class="mb-[120px] text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[260px] xl:w-[272px] lg:mt-10 hover:bg-[#F5E2EC] active:bg-[#E8B8D1] lg:mb-0"
           >
@@ -238,5 +359,5 @@
     </div>
     <!-- Link to main.js -->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
