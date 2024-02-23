@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header
+    id="header"
+    class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
+  >
+    <div
+      class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+    >
+      <div>
+        <a href="#top"
+          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
+        /></a>
+        <a
+          id="header-text"
+          class="text-white font-syne font-extrabold text-lg ml-[34px] block lg:hidden"
+          href="#top"
+        >
+          ARRIORS
+        </a>
+        <a
+          id="header-text-desktop"
+          class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+          href="#top"
+        >
+          ARRIORS BOXING CLUB
+        </a>
+      </div>
+      <div
+        id="header-links"
+        class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
+      >
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/staff">Staff</a>
+        <a href="#facilities">Facilities</a>
+        <a href="/membership">Membership</a>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <!-- DROP DOWN MENU  -->
+      <div id="navbtn" class="z-10 relative w-8 h-4">
+        <img
+          id="white-burger"
+          src="resources/icons/burger-right.png"
+          class="cursor-pointer absolute xl:hidden"
+          loading="lazy"
+          alt="knockout boxing logo"
+        />
+        <img
+          id="black-burger"
+          src="resources/icons/burger-right-dark-blue.png"
+          class="cursor-pointer opacity-0 absolute xl:hidden"
+        />
+        <img
+          id="open-burger"
+          src="resources/icons/open-burger.svg"
+          class="cursor-pointer opacity-0 absolute xl:hidden"
+        />
+      </div>
+      <div
+        class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
+        id="dropdown"
+      >
+        <div
+          class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+        >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="/about"
+            >About</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="/staff"
+            >Staff</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+            href="#facilities"
+            >Facilities</a
+          >
+          <a
+            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
+            href="/membership"
+            >Membership</a
+          >
+        </div>
+      </div>
+    </div>
+    </header>
+    <!-- Hero -->
+    <div class="flex justify-center items-center h-[429px] overflow-hidden">
+        <p class="change-white absolute font-syne font-extrabold text-[32px] leading-[30px] text-white text-center z-10">Contact</p>
+        <div
+        class="h-[615px] w-full overflow-hidden"
+      >
+        <img
+          src="./resources/contact/hero.png"
+          class="w-full h-full object-cover object-[70%_0%]"
+        />
+        </div>
+    </div>
+
+
+    <!-- This makes the header work properly -->
+    <script src="main.js"></script>
+</body>
+</html>
