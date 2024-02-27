@@ -13,12 +13,16 @@ $ cd warriors-boxing-club
 ```
 $ npm i
 ```
+### Run live server
+```
+$ npm run dev
+```
 ## Technology's used:
 
-### HTML5
+#### HTML5
 
-### Tailwind CSS
+#### Tailwind CSS
 
-### Javascript
+#### Javascript
  
-### GreenSock Animation Platform
+#### GreenSock Animation Platform
