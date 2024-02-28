@@ -1,191 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header
-    id="header"
-    class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
-  >
-    <div
-      class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
+      id="header"
+      class="header flex flex-row justify-between py-6 px-7 fixed w-full z-10 lg:px-24 xl:py-9 xl:justify-center"
     >
-      <div>
-        <a href="#top"
-          ><img src="resources/icons/mobile-warrior-logo.svg" class="fixed"
-        /></a>
-        <a
-          id="header-text"
-          class="text-white font-syne font-extrabold text-lg ml-[34px] block lg:hidden"
-          href="#top"
-        >
-          ARRIORS
-        </a>
-        <a
-          id="header-text-desktop"
-          class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
-          href="#top"
-        >
-          ARRIORS BOXING CLUB
-        </a>
-      </div>
       <div
-        id="header-links"
-        class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
+        class="flex flex-row items-start xl:justify-between xl:max-w-[1136px] xl:w-[1136px]"
       >
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/staff">Staff</a>
-        <a href="#facilities">Facilities</a>
-        <a href="/membership">Membership</a>
-      </div>
-    </div>
-    <div class="flex items-center">
-      <!-- DROP DOWN MENU  -->
-      <div id="navbtn" class="z-10 relative w-8 h-4">
-        <img
-          id="white-burger"
-          src="resources/icons/burger-right.png"
-          class="cursor-pointer absolute xl:hidden"
-          loading="lazy"
-          alt="knockout boxing logo"
-        />
-        <img
-          id="black-burger"
-          src="resources/icons/burger-right-dark-blue.png"
-          class="cursor-pointer opacity-0 absolute xl:hidden"
-        />
-        <img
-          id="open-burger"
-          src="resources/icons/open-burger.svg"
-          class="cursor-pointer opacity-0 absolute xl:hidden"
-        />
-      </div>
-      <div
-        class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
-        id="dropdown"
-      >
+        <div>
+          <a href="#top"
+            ><img
+              src="resources/icons/mobile-warrior-logo.svg"
+              class="fixed -mt-[6px] -ml-[10px]"
+              width="51"
+          /></a>
+          <a
+            id="header-text"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] block lg:hidden"
+            href="#top"
+          >
+            ARRIORS
+          </a>
+          <a
+            id="header-text-desktop"
+            class="text-white font-syne font-extrabold text-lg ml-[34px] hidden lg:block xl:text-[22px]"
+            href="#top"
+          >
+            ARRIORS BOXING CLUB
+          </a>
+        </div>
         <div
-          class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+          id="header-links"
+          class="hidden text-white font-syne font-bold z50 w-[454px] xl:flex xl:flex-row xl:justify-between"
         >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
-            href="/"
-            >Home</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="/about"
-            >About</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="/staff"
-            >Staff</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
-            href="#facilities"
-            >Facilities</a
-          >
-          <a
-            class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
-            href="/membership"
-            >Membership</a
-          >
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/staff">Staff</a>
+          <a href="#facilities">Facilities</a>
+          <a href="/membership">Membership</a>
         </div>
       </div>
-    </div>
+      <div class="flex items-center">
+        <!-- DROP DOWN MENU  -->
+        <div id="navbtn" class="z-10 relative w-8 h-4">
+          <img
+            id="white-burger"
+            src="resources/icons/burger-right.png"
+            class="cursor-pointer absolute xl:hidden"
+            loading="lazy"
+            alt="knockout boxing logo"
+          />
+          <img
+            id="black-burger"
+            src="resources/icons/burger-right-dark-blue.png"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+          <img
+            id="open-burger"
+            src="resources/icons/open-burger.svg"
+            class="cursor-pointer opacity-0 absolute xl:hidden"
+          />
+        </div>
+        <div
+          class="bg-white shadow-md pt-[74px] top-0 left-0 h-full fixed -translate-y-full -z-10"
+          id="dropdown"
+        >
+          <div
+            class="font-syne flex justify-between flex-col text-black text-center w-dvw font-bold"
+          >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mt-[80px] opacity-0"
+              href="/"
+              >Home</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/about"
+              >About</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="/staff"
+              >Staff</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] opacity-0"
+              href="#facilities"
+              >Facilities</a
+            >
+            <a
+              class="cursor-pointer menu-link py-[12px] hover:bg-[#EFEFEF] mb-[80px] opacity-0"
+              href="/membership"
+              >Membership</a
+            >
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Hero -->
-    <div class="flex justify-center items-center h-[429px] overflow-hidden lg:h-[474px] xl:h-[548px]">
-        <p class="change-white absolute font-syne font-extrabold text-[32px] leading-[30px] text-white text-center z-10 lg:text-[48px] xl:text-[64px]">Contact</p>
-        <div
-        class="h-[615px] w-full overflow-hidden lg:h-[1087px]"
+    <div
+      class="flex justify-center items-center h-[429px] overflow-hidden lg:h-[474px] xl:h-[548px]"
+    >
+      <p
+        class="change-white absolute font-syne font-extrabold text-[32px] leading-[30px] text-white text-center z-10 lg:text-[48px] xl:text-[64px]"
       >
+        Contact
+      </p>
+      <div class="h-[615px] w-full overflow-hidden lg:h-[1087px]">
         <img
           src="./resources/contact/hero.png"
           class="w-full h-full object-cover object-[70%_0%] lg:object-[25%_0%] lg:pb-[150px] xl:pb-[85px]"
         />
-        </div>
+      </div>
     </div>
     <!-- Form -->
-    <div class=" flex items-center justify-center w-full font-syne py-36">
+    <div class="flex items-center justify-center w-full font-syne py-36">
       <div class="bg-white px-8 rounded-lg">
-          <h2 class="text-[22px] leading-[20px] xl:text-2xl font-extrabold mb-4 w-[336px] text-center lg:text-start lg:w-[608px] xl:w-[656px]">Hear back from us within an hour!</h2>
-          <div class="mb-10 w-[336px] text-center leading-[14px] lg:w-[608px] lg:text-start xl:w-[656px]">
-              Organise an onboarding visit, a call or ask a question
+        <h2
+          class="text-[22px] leading-[20px] xl:text-2xl font-extrabold mb-4 w-[336px] text-center lg:text-start lg:w-[608px] xl:w-[656px]"
+        >
+          Hear back from us within an hour!
+        </h2>
+        <div
+          class="mb-10 w-[336px] text-center leading-[14px] lg:w-[608px] lg:text-start xl:w-[656px]"
+        >
+          Organise an onboarding visit, a call or ask a question
+        </div>
+        <form
+          class="space-y-2 caret-[#DC006F] font-syne w-[336px] lg:lg:w-[608px] xl:w-[656px]"
+        >
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+              class="py-5 pl-6 xl:pl-8 rounded-lg bg-[#EFF3F8] w-[164px] h-[55px] lg:w-[300px] xl:w-[324px]"
+            />
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              class="py-5 pl-6 xl:pl-8 rounded-lg bg-[#EFF3F8] w-[164px] h-[55px] lg:w-[300px] xl:w-[324px]"
+            />
           </div>
-          <form class="space-y-2 caret-[#DC006F] font-syne w-[336px] lg:lg:w-[608px] xl:w-[656px]">
-              <div class="flex space-x-2">
-                  <input type="text" name="first_name" placeholder="First Name" class="py-5 pl-6 xl:pl-8 rounded-lg  bg-[#EFF3F8] w-[164px] h-[55px] lg:w-[300px] xl:w-[324px]">
-                  <input type="text" name="last_name" placeholder="Last Name" class="py-5 pl-6 xl:pl-8 rounded-lg bg-[#EFF3F8] w-[164px] h-[55px] lg:w-[300px] xl:w-[324px]">
-              </div>
-              <input type="email" name="email" placeholder="Email" class="py-5 pl-6 xl:pl-8 rounded-lg bg-[#EFF3F8] w-[336px] h-[55px] lg:w-[608px] xl:w-[656px]">
-              <input type="tel" name="mobile_number" placeholder="Mobile Number" class="py-5 pl-6 xl:pl-8 rounded-lg w-[336px] lg:w-[608px] xl:w-[656px]  bg-[#EFF3F8] h-[55px]">
-              <textarea name="message" placeholder="Message" class="py-5 pl-6 xl:pl-8 rounded-lg w-[336px] lg:w-[608px] xl:w-[656px] resize-none h-[133px] bg-[#EFF3F8]"></textarea>
-              
-              <div class="flex items-start justify-end xl:w-[656px] font-syne">
-                <button type="submit" class="bg-[#DC006F] font-bold text-white rounded-lg text-sm w-[336px] lg:w-[208px] xl:w-[224px] hover:bg-pink-600 h-[49px]">Send</button>
-              </div>
-          </form>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="py-5 pl-6 xl:pl-8 rounded-lg bg-[#EFF3F8] w-[336px] h-[55px] lg:w-[608px] xl:w-[656px]"
+          />
+          <input
+            type="tel"
+            name="mobile_number"
+            placeholder="Mobile Number"
+            class="py-5 pl-6 xl:pl-8 rounded-lg w-[336px] lg:w-[608px] xl:w-[656px] bg-[#EFF3F8] h-[55px]"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="py-5 pl-6 xl:pl-8 rounded-lg w-[336px] lg:w-[608px] xl:w-[656px] resize-none h-[133px] bg-[#EFF3F8]"
+          ></textarea>
+
+          <div class="flex items-start justify-end xl:w-[656px] font-syne">
+            <button
+              type="submit"
+              class="bg-[#DC006F] font-bold text-white rounded-lg text-sm w-[336px] lg:w-[208px] xl:w-[224px] hover:bg-pink-600 h-[49px]"
+            >
+              Send
+            </button>
+          </div>
+        </form>
       </div>
     </div>
     <!-- Footer -->
     <footer
-    class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px] xl:flex-row"
-  >
-    <div
-      class="w-[336px] font-syne text-white lg:w-[816px] lg:flex lg:flex-col xl:flex-row xl:w-[1136px]"
+      class="bg-warriorBlueBg flex flex-col justify-center items-center py-[104px] xl:flex-row"
     >
-      <!-- Flex 1 for Tablet View Port -->
-      <div class="lg:flex lg:flex-row lg:mb-16">
-        <div class="lg:w-[272px] lg:mr-14">
-          <p class="font-extrabold mb-3">Opening Time</p>
-          <p class="mb-3">
-            Monday - Friday: 9:00 AM - 9:00 PM
-            <br />Saturday: 10:00 AM - 6:00 PM <br />Sunday: Closed
-          </p>
-          <p class="mb-[56px] lg:mb-0 lg:w-[272px]">
-            Please note that these hours are subject to change for special
-            events or holidays.
-          </p>
-        </div>
+      <div
+        class="w-[336px] font-syne text-white lg:w-[816px] lg:flex lg:flex-col xl:flex-row xl:w-[1136px]"
+      >
+        <!-- Flex 1 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row lg:mb-16">
+          <div class="lg:w-[272px] lg:mr-14">
+            <p class="font-extrabold mb-3">Opening Time</p>
+            <p class="mb-3">
+              Monday - Friday: 9:00 AM - 9:00 PM
+              <br />Saturday: 10:00 AM - 6:00 PM <br />Sunday: Closed
+            </p>
+            <p class="mb-[56px] lg:mb-0 lg:w-[272px]">
+              Please note that these hours are subject to change for special
+              events or holidays.
+            </p>
+          </div>
 
-        <div class="xl:pr-[10px]">
-          <p class="font-extrabold mb-3">Socials</p>
-          <p class="mb-[56px]">
-            Facebook: @warriorsboxclub
-            <br />Instagram: @warriorsboxclub <br />Twitter: @warriorsboxing
-            <br />YouTube: Warriors Box Club
-          </p>
+          <div class="xl:pr-[10px]">
+            <p class="font-extrabold mb-3">Socials</p>
+            <p class="mb-[56px]">
+              Facebook: @warriorsboxclub
+              <br />Instagram: @warriorsboxclub <br />Twitter: @warriorsboxing
+              <br />YouTube: Warriors Box Club
+            </p>
+          </div>
+        </div>
+        <!-- Flex 2 for Tablet View Port -->
+        <div class="lg:flex lg:flex-row">
+          <div class="lg:w-[272px] lg:mr-14 xl:pl-[47px]">
+            <p class="font-extrabold mb-3">Location</p>
+            <p class="mb-[56px] xl:w-[262px]">
+              Location: Warriors Boxing Club,<br />5 PaddingtonRd, Bath,
+              Somerset, BA54RD
+            </p>
+          </div>
+
+          <div>
+            <p class="font-extrabold mb-3">Contact</p>
+            <p>
+              Email: info@warriorsboxclub.com <br />Phone: +27(555) 4123-4567
+            </p>
+          </div>
         </div>
       </div>
-      <!-- Flex 2 for Tablet View Port -->
-      <div class="lg:flex lg:flex-row">
-        <div class="lg:w-[272px] lg:mr-14 xl:pl-[47px]">
-          <p class="font-extrabold mb-3">Location</p>
-          <p class="mb-[56px] xl:w-[262px]">
-            Location: Warriors Boxing Club,<br />5 PaddingtonRd, Bath,
-            Somerset, BA54RD
-          </p>
-        </div>
-
-        <div>
-          <p class="font-extrabold mb-3">Contact</p>
-          <p>
-            Email: info@warriorsboxclub.com <br />Phone: +27(555) 4123-4567
-          </p>
-        </div>
-      </div>
-    </div>
     </footer>
     <!-- Feel free to reach out... -->
     <hr />
@@ -203,5 +247,5 @@
     </div>
     <!-- This makes the header work properly -->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
