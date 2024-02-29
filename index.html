@@ -11,7 +11,7 @@
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="./resources/icons/mobile-warrior-logo.svg">
     <link rel="apple-tough-icon" sizes="100x100" href="./resources/icons/mobile-warrior-logo.png">
-    
+
     <script defer type="module" src="main.js"></script>
     <script
       defer
@@ -37,6 +37,7 @@
               src="resources/icons/mobile-warrior-logo.svg"
               class="fixed -mt-[6px] -ml-[10px] xl:-mt-[5px]"
               width="51"
+              alt="Letter W in pink"
           /></a>
           <a
             id="header-text"
@@ -78,11 +79,13 @@
             id="black-burger"
             src="resources/icons/burger-right-dark-blue.webp"
             class="cursor-pointer opacity-0 absolute xl:hidden"
+            alt="burger icon"
           />
           <img
             id="open-burger"
             src="resources/icons/open-burger.svg"
             class="cursor-pointer opacity-0 absolute xl:hidden"
+            alt="burger icon"
           />
         </div>
         <div
@@ -143,11 +146,14 @@
             resilience, with support from our community and coaches, regardless
             of your experience level. Begin your transformation today.
           </p>
-          <button
-            class="bg-white text-black font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg lg:bg-[#DC006F] lg:text-white lg:max-w-72 lg:self-start"
-          >
-            Join now
-          </button>
+          <a href="/contact.html" class="bg-white text-center text-black font-syne py-3 max-w-80 font-bold text-[14px] w-11/12 mt-12 rounded-lg lg:bg-[#DC006F] lg:text-white lg:max-w-72 lg:self-start hover:bg-[#9B004E] active:bg-[#5A002E]">
+            <button
+              
+              href="/contact.html"
+            >
+              Join now
+            </button>
+          </a>
         </div>
         <div class="hidden lg:block"></div>
       </div>
@@ -340,16 +346,18 @@
               &#x2022; Clean, Modern Changing Rooms
             </li>
           </ul>
-          <button
-            class="bg-[#DC006F] text-white self-center font-syne py-3 max-w-80 font-bold text-[14px] w-full mt-12 rounded-lg lg:self-start lg:mt-10 lg:max-w-[260px]"
-          >
-            View All
-          </button>
+          <a href="/facilities.html">
+            <button
+              class="bg-[#DC006F] text-white self-center font-syne py-3 max-w-80 font-bold text-[14px] w-full mt-12 rounded-lg lg:self-start lg:mt-10 lg:max-w-[260px] hover:bg-[#9B004E] active:bg-[#5A002E]"
+            >
+              View All
+            </button>
+          </a>
         </div>
       </div>
       <div>
         <img
-          src="resources\bags-tablet.webp"
+          src="resources/bags-tablet.webp"
           alt="Punching Bags"
           class="m-auto mt-24 pt-2 hidden lg:block xl:hidden"
           width="364"
@@ -357,7 +365,7 @@
           loading="lazy"
         />
         <img
-          src="resources\bags-desktop.webp"
+          src="resources/bags-desktop.webp"
           alt="Punching Bags"
           class="m-auto mt-24 pt-2 hidden xl:block"
           width="528"
@@ -399,11 +407,13 @@
             <span class="font-bold">Bath</span> area. Whether you're a local or
             just passing through, drop in for a session.
           </p>
-          <button
-            class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[272px] lg:mt-10 hover:bg-[#F5E2EC] active:bg-[#E8B8D1]"
-          >
-            View on Maps
-          </button>
+          <a href="https://maps.app.goo.gl/STBa9FEg6uNsHyQm7" target="_blank">
+            <button
+              class="text-warriorPink mt-12 border-[1.6px] w-[336px] h-[49px] border-warriorPink text-[14px] font-bold rounded-lg lg:w-[272px] lg:mt-10 hover:bg-[#F5E2EC] active:bg-[#E8B8D1]"
+            >
+              View on Maps
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -521,7 +531,7 @@
                 >
                   Jumpstart your boxing journey with our foundational course.
                 </p>
-                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                <a href="/membership.html" class="font-bold text-sm underline leading-[16.8px] hover:text-[#F5E2EC] active:text-[#E8B8D1]"
                   >View Package</a
                 >
               </div>
@@ -548,7 +558,7 @@
                 >
                   For those ready to take their skills to the competition level.
                 </p>
-                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                <a href="/membership.html" class="font-bold text-sm underline leading-[16.8px] hover:text-[#F5E2EC] active:text-[#E8B8D1]"
                   >View Package</a
                 >
               </div>
@@ -575,7 +585,7 @@
                 >
                   One-on-one sessions tailored to your goals.
                 </p>
-                <a href="#" class="font-bold text-sm underline leading-[16.8px]"
+                <a href="/membership.html" class="font-bold text-sm underline leading-[16.8px] hover:text-[#F5E2EC] active:text-[#E8B8D1]"
                   >View Package</a
                 >
               </div>
@@ -584,7 +594,8 @@
         </div>
         <!-- View all packages link -->
         <a
-          class="font-syne font-extrabold underline decoration-warriorPink pt-10 pb-20 lg:pt-6 lg:pb-28"
+          class="font-syne font-extrabold underline decoration-warriorPink mt-10 mb-20 lg:mt-6 lg:mb-28 hover:text-[#F5E2EC] active:text-[#E8B8D1]"
+          href="/membership.html"
           >View All Packages</a
         >
       </div>
