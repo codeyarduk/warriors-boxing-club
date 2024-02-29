@@ -10,6 +10,7 @@ export default defineConfig({
         facilities: '/facilities.html',
         staff: '/staff.html',
         membership: '/membership.html',
+        main: '/main.js'
         // Add other pages as needed
       }
     }
